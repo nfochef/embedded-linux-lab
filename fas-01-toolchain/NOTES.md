@@ -29,4 +29,6 @@ Skrapade på Ytan om QUEMU kunskap som används för att testa embedded-images u
 
 2:
 sudo apt install -y gcc-aarch64-linux-gnu binutils-aarch64-linux-gnu file
-aarch64-linux-gnu är min toolchain.
+aarch64-linux-gnu är min toolchain...
+aarch64-linux-gnu-gcc --version  (Vilken version jag har och sedan vad min target har : 
+aarch64-linux-gnu-gcc (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0
