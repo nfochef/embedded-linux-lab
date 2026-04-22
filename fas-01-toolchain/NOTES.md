@@ -24,3 +24,4 @@ Cross-kompilering är bra för många orsaker , då cross kompilering är bara b
 En faktor som spelar roll här är vart ben byggs Hosten är naturligtvis snabbare i detta fallet  , att bygga en hel distro (Yocto) på zeron är kanske omöjligt pga av sitt minne.
 Även om GCC finns på Target så kommer den att väljas bort senare i bygget.
 cross-komplimering ger även en möjlighet för reproducerbarhet/CI.
+Skrapade på Ytan om QUEMU kunskap som används för att testa embedded-images utan fysisk hårdvara. 
