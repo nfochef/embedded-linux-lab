@@ -1,3 +1,4 @@
+
 embedded-linux-lab on  main
 ❯ uname -m
 uname -a
@@ -32,3 +33,7 @@ sudo apt install -y gcc-aarch64-linux-gnu binutils-aarch64-linux-gnu file
 aarch64-linux-gnu är min toolchain...
 aarch64-linux-gnu-gcc --version  (Vilken version jag har och sedan vad min target har : 
 aarch64-linux-gnu-gcc (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0
+byggde hello.c
+testar att köra:
+<img width="1613" height="561" alt="Skärmbild 2026-04-22 172612" src="https://github.com/user-attachments/assets/12f8feb3-dba5-46a5-8a96-00cbd03e83b2" />
+
