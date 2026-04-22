@@ -25,3 +25,8 @@ En faktor som spelar roll här är vart ben byggs Hosten är naturligtvis snabba
 Även om GCC finns på Target så kommer den att väljas bort senare i bygget.
 cross-komplimering ger även en möjlighet för reproducerbarhet/CI.
 Skrapade på Ytan om QUEMU kunskap som används för att testa embedded-images utan fysisk hårdvara. 
+
+
+2:
+sudo apt install -y gcc-aarch64-linux-gnu binutils-aarch64-linux-gnu file
+aarch64-linux-gnu är min toolchain.
