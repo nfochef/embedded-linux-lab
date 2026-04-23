@@ -33,7 +33,8 @@ sudo apt install -y gcc-aarch64-linux-gnu binutils-aarch64-linux-gnu file<br>
 aarch64-linux-gnu är min toolchain...<br>
 aarch64-linux-gnu-gcc --version  (Vilken version jag har och sedan vad min target har : <br>
 aarch64-linux-gnu-gcc (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0<br>
-byggde hello.c<br>
+<br>
+byggde hello.c för att ha en fil att testa och förstå hur filer beteer sig och vad dom säger.<br>
 <img width="796" height="309" alt="Skärmbild 2026-04-23 100158" src="https://github.com/user-attachments/assets/38bfd836-d5b9-4f5b-b5e2-9ac9b3d0b073" />
 testar att köra:
 <img width="1613" height="561" alt="Skärmbild 2026-04-22 172612" src="https://github.com/user-attachments/assets/12f8feb3-dba5-46a5-8a96-00cbd03e83b2" />
