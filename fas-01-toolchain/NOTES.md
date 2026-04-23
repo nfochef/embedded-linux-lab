@@ -118,7 +118,7 @@ Programheadern är på 56 bytes Styck<br>
 Sections headers är på 64 bytes styck<br>
 
 Om man vill veta exakt vad som laddas i minnet av filen kan man används sig av readelf -l eller om man vill se alla sektioner så fungerar readelf -S<br>
-detta gav mig en koppling till och större förståelse för ldd.<br>
+detta gav mig en koppling till och större förståelse för ldd då readelf -h visar vad filen är och ldd visar ju vilka bibliotek som behövs vid körning och då blir det en koppling via ELF-strukturen<br>
 
 
 
