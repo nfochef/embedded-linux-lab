@@ -78,7 +78,24 @@ Laddas från /lib/aarch64-linux-gnu/libc.so.6<br>
 
 Så hello-dyn är dynamiskt länkad och behöver externa bibliotek MEN hello-static är statiskt länkat och alla bibliotek är redan inbakade i binären så inga externa .so filer behövs. DETTA är lite ögonöppnande och ökar mitt förstående för dependencies!<br>
 
+#### ELF = Executable and Linkable Format. Detta är binärformatet på Linux. Varje Linux-binär är ELF.
+De används för :<br>
+körbara program (executables)<br>
+delade bibliotek (.so)<br>
+objektfiler (.o)<br>
+core dumps<br>
 
+Verktygen som kan vara bra att kunna kring ELF listas som<br>
+file - ser vad det är för typ av fil
+ldd - listar dynamiska beroenden
+readelf - visar ELF-strukturen (headers, sektioner)
+objdump - disassembler + info
+nm - listar symboler
+
+Jag körde med -readelf i mitt hello-dyn och det kom ut intressant information kring detta: <br>
+
+<img width="1348" height="619" alt="Skärmbild 2026-04-23 112608" src="https://github.com/user-attachments/assets/0f4f64b8-2534-40a8-9b0f-c5b7d4755f81" />
+<br>
 
 
 
