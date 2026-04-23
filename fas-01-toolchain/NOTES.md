@@ -101,8 +101,7 @@ Jag körde med -readelf i mitt hello-dyn och det kom ut intressant information k
 Som vi kan se här är så bekräftar det att det är en ELF fil Klass EFL64 menas med att det är en 64 bitars binär.<br>
 Data: little endian som har lägsta byte först vilket är standard för ARM64/x86_64.<br>
 Machine: AArch64 visar att den är Kompilerad för ARM 64-bit (tex. Raspberry Pi 64-bit, ARM-servrar)<br>
-Type: DYN (Position-Independent Executable file) är en viktig punkt som man ska titta lite extra på den visar att det är ett program (inte ett bibliotek) det står det DYN,<br>
-det betyder att det är en PIE (Position Independent Executable)<br>
+Type: DYN (Position-Independent Executable file) är en viktig punkt som man ska titta lite extra på den visar att det är ett program (inte ett bibliotek) det står DYN, det betyder att det är en PIE (Position Independent Executable)<br>
 Vilket menas med att den:<br>
 Laddas på slumpad adress (ASLR)<br>
 Ser ut som ett delat bibliotek internt<br>
