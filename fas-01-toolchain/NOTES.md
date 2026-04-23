@@ -55,3 +55,14 @@ Det är inte riktig cross-kompilering, det är native ARM64-bygge med två olika
 
 <img width="1068" height="145" alt="Skärmbild 2026-04-23 100544" src="https://github.com/user-attachments/assets/32cbc660-df66-422c-92bc-9b7240009aaf" />
 <img width="1072" height="118" alt="Skärmbild 2026-04-23 100513" src="https://github.com/user-attachments/assets/6f6cdc3e-e47a-46d5-83a9-564e98a517c2" />
+
+Problemet är att jag inte kan riktigt få en corss-komliering på min snapdragon X(ARM64) Då jag använder WSL2 för virutalisering och ARM windows kan endast köra ARM64-distributioner natively i WSL2. MS stödjer inte en x86_64-WSL2-distribution för ARM-Windows. <br>
+Inu läget har jag två val:
+Docker med x86-emulation<br>
+Fördelar med Docker: Att jag kan köra en riktig x86->ARM utan att behöva röra windows installationen.<br>
+Nackdel med Docker: Den blir lite långsammare.<br>
+
+Det andra valet jag har att göra är att skippa x86 helt och fokusera på att gå vidare med Buildroot där cross erfarenheten kommer naturlig via Buildroots egna toolchain.<br>
+Detta är det jag kommer att fokusera på istället för att jobba med Docker.<br>
+
+
