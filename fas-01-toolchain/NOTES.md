@@ -38,9 +38,6 @@ byggde hello.c<br>
 testar att köra:
 <img width="1613" height="561" alt="Skärmbild 2026-04-22 172612" src="https://github.com/user-attachments/assets/12f8feb3-dba5-46a5-8a96-00cbd03e83b2" />
 
-
-
-
 Paket som finns vid körning: dpkg -l | grep -E "aarch64|arm64-cross" | awk '{print $2}' ::<br>
 binutils-aarch64-linux-gnu<br>
 cpp-13-aarch64-linux-gnu<br>
@@ -69,10 +66,11 @@ Detta är det jag kommer att fokusera på istället för att jobba med Docker.<b
 Statisk vs dynamisk länkning, tanken är att förstå vad en ELF-binär faktiskt är, vad den beror på och varför jag har sett att den dyker ofta upp i embedded projekt.
 testar att bygga aarch64-linux-gnu-gcc -o hello-dyn hello.c<br>
 aarch64-linux-gnu-gcc -static -o hello-static hello.c <br> -static säger till linkern att ta med alla bibliotek i binären, för att jämnföra storleken på filen:<br>
+
 <img width="1131" height="350" alt="Skärmbild 2026-04-23 105234" src="https://github.com/user-attachments/assets/3a272b2b-39f7-417e-9215-09bee86e7d99" /><br>
 
-ldd - Listar dynamiska bibliotek en binär behöver vid runtime
-vad säger då outputen?
+ldd - Listar dynamiska bibliotek en binär behöver vid runtime<br>
+vad säger då outputen?<br>
 linux-vdso.so.1, Virtuellt bibliotek från kärnan (för snabba systemanrop)<br>
 libc.so.6 ,Standard C-biblioteket (printf, malloc osv.) <br>
 Laddas från /lib/aarch64-linux-gnu/libc.so.6<br> 
