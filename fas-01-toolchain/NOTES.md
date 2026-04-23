@@ -130,7 +130,7 @@ Det körs direkt<br>
 DYN - dynamiskt program (PIE)<br>
 Den behöver ladda bibliotek (libc.so.6)<br>
 Och startas via dynamisk länkare<br>
-<u>I ELF betyder alltså:<u\><br>
+<u>I ELF betyder alltså:<\u><br>
 EXEC = fristående<br>
 DYN = beroenden behövs<br>
 
