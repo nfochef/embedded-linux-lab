@@ -120,6 +120,12 @@ Sections headers är på 64 bytes styck<br>
 Om man vill veta exakt vad som laddas i minnet av filen kan man används sig av readelf -l eller om man vill se alla sektioner så fungerar readelf -S<br>
 detta gav mig en koppling till och större förståelse för ldd då readelf -h visar vad filen är och ldd visar ju vilka bibliotek som behövs vid körning och då blir det en koppling via ELF-strukturen<br>
 
+Kör jag, aarch64-linux-gnu-readelf -h hello-static så säger skillnaden något vitigt:<br>
+<img width="683" height="416" alt="Skärmbild 2026-04-23 125822" src="https://github.com/user-attachments/assets/034f7f65-8419-4ff5-9d0d-b38a8ca74f87" /><br>
+
+
+
+
 
 
 
