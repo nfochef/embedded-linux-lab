@@ -37,3 +37,20 @@ byggde hello.c
 testar att köra:
 <img width="1613" height="561" alt="Skärmbild 2026-04-22 172612" src="https://github.com/user-attachments/assets/12f8feb3-dba5-46a5-8a96-00cbd03e83b2" />
 
+<img width="796" height="309" alt="Skärmbild 2026-04-23 100158" src="https://github.com/user-attachments/assets/38bfd836-d5b9-4f5b-b5e2-9ac9b3d0b073" />
+
+
+Paket som finns vid körning: dpkg -l | grep -E "aarch64|arm64-cross" | awk '{print $2}' ::
+binutils-aarch64-linux-gnu
+cpp-13-aarch64-linux-gnu
+cpp-aarch64-linux-gnu
+g++-13-aarch64-linux-gnu
+g++-aarch64-linux-gnu
+gcc-13-aarch64-linux-gnu
+gcc-aarch64-linux-gnu    = Kompilatorn
+
+notering: Jag saknar verifiering på att det är en cross kompilation genom kommandot åvan samt så finns några dubletter av paket (-13), : md5sum gav identiska hashar för hello-native och hello-pi. gcc och aarch64-linux-gnu-gcc är i praktiken samma kompilator på min ARM64-WSL2.
+Det är inte riktig cross-kompilering, det är native ARM64-bygge med två olika kommandonamn som råkar ge samma resultat.
+
+<img width="1068" height="145" alt="Skärmbild 2026-04-23 100544" src="https://github.com/user-attachments/assets/32cbc660-df66-422c-92bc-9b7240009aaf" />
+<img width="1072" height="118" alt="Skärmbild 2026-04-23 100513" src="https://github.com/user-attachments/assets/6f6cdc3e-e47a-46d5-83a9-564e98a517c2" />
