@@ -92,10 +92,35 @@ readelf - visar ELF-strukturen (headers, sektioner)
 objdump - disassembler + info
 nm - listar symboler
 
-Jag körde med -readelf i mitt hello-dyn och det kom ut intressant information kring detta: <br>
+Jag körde med -readelf i mitt hello-dyn och det kom ut intressant information kring själva ELF-headern det så kallade "ID'Kortet" för binären: <br>
 
 <img width="1348" height="619" alt="Skärmbild 2026-04-23 112608" src="https://github.com/user-attachments/assets/0f4f64b8-2534-40a8-9b0f-c5b7d4755f81" />
 <br>
+
+
+Som vi kan se här är så bekräftar det att det är en ELF fil Klass EFL64 menas med att det är en 64 bitars binär.<br>
+Data: little endian som har lägsta byte först vilket är standard för ARM64/x86_64.<br>
+Machine: AArch64 visar att den är Kompilerad för ARM 64-bit (tex. Raspberry Pi 64-bit, ARM-servrar)<br>
+Type: DYN (Position-Independent Executable file) är en viktig punkt som man ska titta lite extra på den visar att det är ett program (inte ett bibliotek) det står det DYN,<br>
+det betyder att det är en PIE (Position Independent Executable)<br>
+Vilket menas med att den:<br>
+Laddas på slumpad adress (ASLR)<br>
+Ser ut som ett delat bibliotek internt<br>
+Standard i moderna Linux (säkerhetsskäl)<br>
+Startpunkten entry point 0x780 säger att här börjar exekveringen och att det inte är min main() direkt utan runtime-startkod(crt, loader setup)
+Headers beskriver hur filen är organiserad. Start of program headers 64 bytes, direkt efter ELF-headern. Antal nummer av headers 9 st det beskriver vad som ska laddas i minnet(segment)
+Start of section headers ligger lmycket längre bak i filen och antal sektions headers är 28 sektioner som .text .data .bss .rodata etc..<br>
+Skillnaden mellan sektion och program headers är att program headers används av OS när programmet körs och säger ladda detta i minnet.<br>
+Sektion headers används av verktyg tex linker, debugger osv dom säger el pekar lite på att detta är kod detta är data och detta är symboler.. <br>
+
+ELF headern är på 64 bytes <br>
+Programheadern är på 56 bytes Styck<br>
+Sections headers är på 64 bytes styck<br>
+
+Om man vill veta exakt vad som laddas i minnet av filen kan man används sig av readelf -l eller om man vill se alla sektioner så fungerar readelf -S<br>
+detta gav mig en koppling till och större förståelse för ldd.<br>
+
+
 
 
 
