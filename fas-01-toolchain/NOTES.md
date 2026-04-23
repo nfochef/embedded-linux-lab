@@ -135,6 +135,12 @@ EXEC = fristående<br>
 DYN = beroenden behövs<br>
 
 
+Om jag nu väljer att köra aarch64-linux-gnu-readelf -V hello-dyn | head -40    så får jag fram versions kravpå bibliotek i min ELF (dvs vilken version av libc och loader som krävs.)<br>
+<img width="717" height="324" alt="Skärmbild 2026-04-23 165156" src="https://github.com/user-attachments/assets/2c4f670f-2058-41d9-9d1d-e6baece4ef87" /><br>
+
+Detta är bra information att lära sig då detta gör att du kan se om man får fel vid körning som att programmet inte startar el när man bygger program för andra maskiner.<br>
+då kan man använda detta för att se minsta glibc-version den binären kräver och avgöra om den kommer fungera på målmaskinen.<br>
+el om den funkar i docker containern men krashar i production då kan det vara skillnad i libc-versionen.<br>
 
 
 
