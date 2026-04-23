@@ -68,7 +68,7 @@ Detta är det jag kommer att fokusera på istället för att jobba med Docker.<b
 # 3:<br>
 Statisk vs dynamisk länkning, tanken är att förstå vad en ELF-binär faktiskt är, vad den beror på och varför jag har sett att den dyker ofta upp i embedded projekt.
 testar att bygga aarch64-linux-gnu-gcc -o hello-dyn hello.c<br>
-aarch64-linux-gnu-gcc -static -o hello-static hello.c ::: -static säger till linkern att ta med alla bibliotek i binären, för att jämnföra storleken på filen:<br>
+aarch64-linux-gnu-gcc -static -o hello-static hello.c <br> -static säger till linkern att ta med alla bibliotek i binären, för att jämnföra storleken på filen:<br>
 <img width="1131" height="350" alt="Skärmbild 2026-04-23 105234" src="https://github.com/user-attachments/assets/3a272b2b-39f7-417e-9215-09bee86e7d99" /><br>
 
 ldd - Listar dynamiska bibliotek en binär behöver vid runtime
