@@ -20,7 +20,7 @@ VERSION_ID="24.04"<br>
 Tankar kring Host och Target:<br>
 Pi Zero 2W = ARMv8-A, Cortex-A53, 64-bit (aarch64). Host har nyare glibc. Pi har gcc installerad.<br>
 
-Cross-kompilering är bra för många orsaker , då cross kompilering är bara byggprocessen , när binären körs på zeron beteer sig den identiskt oavsätt vart jag byggde den, det blir samma maskinkod cross-kompilering handlar om vart bygget sker. <br>
+Cross-kompilering är bra för många orsaker, då cross kompilering är bara byggprocessen , när binären körs på zeron beteer sig den identiskt oavsätt vart jag byggde den, det blir samma maskinkod cross-kompilering handlar om vart bygget sker. <br>
 
 En faktor som spelar roll här är vart ben byggs Hosten är naturligtvis snabbare i detta fallet  , att bygga en hel distro (Yocto) på zeron är kanske omöjligt pga av sitt minne.<br>
 Även om GCC finns på Target så kommer den att väljas bort senare i bygget.<br>
@@ -50,14 +50,14 @@ g++-aarch64-linux-gnu<br>
 gcc-13-aarch64-linux-gnu<br>
 gcc-aarch64-linux-gnu    = Kompilatorn<br>
 
-notering: Jag saknar verifiering på att det är en cross kompilation genom kommandot åvan samt så finns några dubletter av paket (-13), : md5sum gav identiska hashar för hello-native och hello-pi. gcc och aarch64-linux-gnu-gcc är i praktiken samma kompilator på min ARM64-WSL2.<br>
+Notering: Jag saknar verifiering på att det är en cross kompilation genom kommandot åvan samt så finns några dubletter av paket (-13), : md5sum gav identiska hashar för hello-native och hello-pi. gcc och aarch64-linux-gnu-gcc är i praktiken samma kompilator på min ARM64-WSL2.<br>
 Det är inte riktig cross-kompilering, det är native ARM64-bygge med två olika kommandonamn som råkar ge samma resultat.<br>
 
 <img width="1068" height="145" alt="Skärmbild 2026-04-23 100544" src="https://github.com/user-attachments/assets/32cbc660-df66-422c-92bc-9b7240009aaf" />
 <img width="1072" height="118" alt="Skärmbild 2026-04-23 100513" src="https://github.com/user-attachments/assets/6f6cdc3e-e47a-46d5-83a9-564e98a517c2" />
 
 Problemet är att jag inte kan riktigt få en corss-komliering på min snapdragon X(ARM64) Då jag använder WSL2 för virutalisering och ARM windows kan endast köra ARM64-distributioner natively i WSL2. MS stödjer inte en x86_64-WSL2-distribution för ARM-Windows. <br>
-Inu läget har jag två val:
+Just nu har jag två val:
 Docker med x86-emulation<br>
 Fördelar med Docker: Att jag kan köra en riktig x86->ARM utan att behöva röra windows installationen.<br>
 Nackdel med Docker: Den blir lite långsammare.<br>
