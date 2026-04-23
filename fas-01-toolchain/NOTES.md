@@ -70,6 +70,7 @@ aarch64-linux-gnu-gcc -static -o hello-static hello.c <br> -static säger till l
 
 <img width="1131" height="350" alt="Skärmbild 2026-04-23 105234" src="https://github.com/user-attachments/assets/3a272b2b-39f7-417e-9215-09bee86e7d99" /><br>
 
+-d = dynamic section. Den innehåller instruktioner till den dynamiska länkaren vid start, vilka .so filer att ladda , symboler att resolva etx etc..<br>
 ldd - Listar dynamiska bibliotek en binär behöver vid runtime<br>
 vad säger då outputen?<br>
 linux-vdso.so.1, Virtuellt bibliotek från kärnan (för snabba systemanrop)<br>
@@ -122,6 +123,16 @@ detta gav mig en koppling till och större förståelse för ldd då readelf -h 
 
 Kör jag, aarch64-linux-gnu-readelf -h hello-static så säger skillnaden något vitigt:<br>
 <img width="683" height="416" alt="Skärmbild 2026-04-23 125822" src="https://github.com/user-attachments/assets/034f7f65-8419-4ff5-9d0d-b38a8ca74f87" /><br>
+
+EXEC = statiskt program<br>
+Allt finns i filen<br>
+Det körs direkt<br>
+DYN - dynamiskt program (PIE)<br>
+Den behöver ladda bibliotek (libc.so.6)<br>
+Och startas via dynamisk länkare<br>
+<u>I ELF betyder alltså:<u\><br>
+EXEC = fristående<br>
+DYN = beroenden behövs<br>
 
 
 
