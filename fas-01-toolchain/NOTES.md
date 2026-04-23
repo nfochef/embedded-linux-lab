@@ -28,7 +28,7 @@ cross-komplimering ger även en möjlighet för reproducerbarhet/CI.<br>
 Skrapade på Ytan om QUEMU kunskap som används för att testa embedded-images utan fysisk hårdvara. <br>
 
 
-##2:<br>
+#2:<br>
 sudo apt install -y gcc-aarch64-linux-gnu binutils-aarch64-linux-gnu file<br>
 aarch64-linux-gnu är min toolchain...<br>
 aarch64-linux-gnu-gcc --version  (Vilken version jag har och sedan vad min target har : <br>
@@ -65,7 +65,7 @@ Nackdel med Docker: Den blir lite långsammare.<br>
 Det andra valet jag har att göra är att skippa x86 helt och fokusera på att gå vidare med Buildroot där cross erfarenheten kommer naturlig via Buildroots egna toolchain.<br>
 Detta är det jag kommer att fokusera på istället för att jobba med Docker.<br>
 
-##3:<br>
+#3:<br>
 Statisk vs dynamisk länkning, tanken är att förstå vad en ELF-binär faktiskt är, vad den beror på och varför jag har sett att den dyker ofta upp i embedded projekt.
 testar att bygga aarch64-linux-gnu-gcc -o hello-dyn hello.c<br>
 aarch64-linux-gnu-gcc -static -o hello-static hello.c ::: -static säger till linkern att ta med alla bibliotek i binären, för att jämnföra storleken på filen:<br>
