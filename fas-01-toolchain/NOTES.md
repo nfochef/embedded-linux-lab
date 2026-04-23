@@ -53,8 +53,8 @@ gcc-aarch64-linux-gnu    = Kompilatorn<br>
 Notering: Jag saknar verifiering på att det är en cross kompilation genom kommandot åvan samt så finns några dubletter av paket (-13), : md5sum gav identiska hashar för hello-native och hello-pi. gcc och aarch64-linux-gnu-gcc är i praktiken samma kompilator på min ARM64-WSL2.<br>
 Det är inte riktig cross-kompilering, det är native ARM64-bygge med två olika kommandonamn som råkar ge samma resultat.<br>
 
-<img width="1068" height="145" alt="Skärmbild 2026-04-23 100544" src="https://github.com/user-attachments/assets/32cbc660-df66-422c-92bc-9b7240009aaf" />
-<img width="1072" height="118" alt="Skärmbild 2026-04-23 100513" src="https://github.com/user-attachments/assets/6f6cdc3e-e47a-46d5-83a9-564e98a517c2" />
+<img width="1068" height="145" alt="Skärmbild 2026-04-23 100544" src="https://github.com/user-attachments/assets/32cbc660-df66-422c-92bc-9b7240009aaf" /><br>
+<img width="1072" height="118" alt="Skärmbild 2026-04-23 100513" src="https://github.com/user-attachments/assets/6f6cdc3e-e47a-46d5-83a9-564e98a517c2" /><br>
 
 Problemet är att jag inte kan riktigt få en corss-komliering på min snapdragon X(ARM64) Då jag använder WSL2 för virutalisering och ARM windows kan endast köra ARM64-distributioner natively i WSL2. MS stödjer inte en x86_64-WSL2-distribution för ARM-Windows. <br>
 Just nu har jag två val:
@@ -67,9 +67,9 @@ Detta är det jag kommer att fokusera på istället för att jobba med Docker.<b
 
 ##3:<br>
 Statisk vs dynamisk länkning, tanken är att förstå vad en ELF-binär faktiskt är, vad den beror på och varför jag har sett att den dyker ofta upp i embedded projekt.
-testar att bygga aarch64-linux-gnu-gcc -o hello-dyn hello.c
+testar att bygga aarch64-linux-gnu-gcc -o hello-dyn hello.c<br>
 aarch64-linux-gnu-gcc -static -o hello-static hello.c ::: -static säger till linkern att ta med alla bibliotek i binären, för att jämnföra storleken på filen:<br>
-<img width="1131" height="350" alt="Skärmbild 2026-04-23 105234" src="https://github.com/user-attachments/assets/3a272b2b-39f7-417e-9215-09bee86e7d99" />
+<img width="1131" height="350" alt="Skärmbild 2026-04-23 105234" src="https://github.com/user-attachments/assets/3a272b2b-39f7-417e-9215-09bee86e7d99" /><br>
 
 ldd - Listar dynamiska bibliotek en binär behöver vid runtime
 vad säger då outputen?
