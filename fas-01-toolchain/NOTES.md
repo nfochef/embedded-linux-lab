@@ -28,7 +28,7 @@ cross-komplimering ger även en möjlighet för reproducerbarhet/CI.<br>
 Skrapade på Ytan om QUEMU kunskap som används för att testa embedded-images utan fysisk hårdvara. <br>
 
 
-2:
+##2:<br>
 sudo apt install -y gcc-aarch64-linux-gnu binutils-aarch64-linux-gnu file<br>
 aarch64-linux-gnu är min toolchain...<br>
 aarch64-linux-gnu-gcc --version  (Vilken version jag har och sedan vad min target har : <br>
@@ -64,5 +64,25 @@ Nackdel med Docker: Den blir lite långsammare.<br>
 
 Det andra valet jag har att göra är att skippa x86 helt och fokusera på att gå vidare med Buildroot där cross erfarenheten kommer naturlig via Buildroots egna toolchain.<br>
 Detta är det jag kommer att fokusera på istället för att jobba med Docker.<br>
+
+##3:<br>
+Statisk vs dynamisk länkning, tanken är att förstå vad en ELF-binär faktiskt är, vad den beror på och varför jag har sett att den dyker ofta upp i embedded projekt.
+testar att bygga aarch64-linux-gnu-gcc -o hello-dyn hello.c
+aarch64-linux-gnu-gcc -static -o hello-static hello.c ::: -static säger till linkern att ta med alla bibliotek i binären, för att jämnföra storleken på filen:<br>
+<img width="1131" height="350" alt="Skärmbild 2026-04-23 105234" src="https://github.com/user-attachments/assets/3a272b2b-39f7-417e-9215-09bee86e7d99" />
+
+ldd - Listar dynamiska bibliotek en binär behöver vid runtime
+vad säger då outputen?
+linux-vdso.so.1, Virtuellt bibliotek från kärnan (för snabba systemanrop)<br>
+libc.so.6 ,Standard C-biblioteket (printf, malloc osv.) <br>
+Laddas från /lib/aarch64-linux-gnu/libc.so.6<br> 
+/lib/ld-linux-aarch64.so.1 ,Dynamiska länkaren (loadern) som startar programmet<br>
+
+Så hello-dyn är dynamiskt länkad och behöver externa bibliotek MEN hello-static är statiskt länkat och alla bibliotek är redan inbakade i binären så inga externa .so filer behövs. DETTA är lite ögonöppnande och ökar mitt förstående för dependencies!<br>
+
+
+
+
+
 
 
