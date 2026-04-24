@@ -163,9 +163,14 @@ el om den funkar i docker containern men krashar i production då kan det vara s
 
 
 
-# 4:<br>
+# 4:<br> Bootloader
 CMake el Make för Bootloadern?
 Funderar på varför man inte använder CMake för detta men i korta drag. CMake för applicationer och cross plattform projekt och ren Make när man jobbar med kernel, bootloaders el skriver recipes..
+
+När jag skapade Makefilen och kör make får jag ju som väntat gcc -o hello hello.c.<br>
+skriver jag make igen får jag make: 'hello' is up to date. men vad är det som gör det? varför får jag det betteendet?
+-Det berodde på att make jämnför tidsstämplar och inget har ändrats i målfilen el är lika ny som beroenderna då säger den att den är up to date.<br>
+sedan skapade jag en ny med touch hello.c och gjorde make på den då kompilerade den pga att det var en ny tidsstämpel och därför fick jag gcc -o hello hello.c..
 
 
 
