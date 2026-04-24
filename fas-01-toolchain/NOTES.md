@@ -163,7 +163,9 @@ el om den funkar i docker containern men krashar i production då kan det vara s
 
 
 
-
+# 4:<br>
+CMake el Make för Bootloadern?
+Funderar på varför man inte använder CMake för detta men i korta drag. CMake för applicationer och cross plattform projekt och ren Make när man jobbar med kernel, bootloaders el skriver recipes..
 
 
 
