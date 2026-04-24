@@ -76,9 +76,9 @@ Statisk vs dynamisk länkning, tanken är att förstå vad en ELF-binär faktisk
   Många binärer då. då vinner faktiskt dynamiskt för att libc finns bara en gång och varje binr blir liten.<br>
 -Strategin många använder sig av är att använda sig av busybox som är statisk, den har endast en binär med många kommandon eller dynamisk med musl libc som har en liten footprint verkar det som , jag ska gräva lite mer i <br>          detta<br><br>
 **En produkt som använder många binärer som alla använder libc. vilken vinner då?**<br>
--Det borde vara att den dynamiska länkningen vinner nästan alltid då flashen via statisk binär innehåller libc och ger dublicering mot att den dynamiska binären så är libc bara en gång. <br><br>
+-Det borde vara att den dynamiska länkningen vinner nästan alltid då flashen via statisk binär innehåller libc och ger dublicering mot att den dynamiska binären så är libc bara en gång. <br>
   vad händer i RAM'en då? varje process har en egen kopia om den är statisk och dynamisk så delas det mellan processer.<br>
-  och ska man underhålla så med statisk behövs en rebuild av allt medans dynamisk behöver man bara uppdatera libc...<br>
+  Vid underhåll så med statisk behövs en rebuild av allt medans dynamisk behöver man bara uppdatera libc...<br>
 <br>
 <br>
 <br>
