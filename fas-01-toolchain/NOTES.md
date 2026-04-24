@@ -124,10 +124,10 @@ detta gav mig en koppling till en större förståelse för ldd då readelf -h v
 Kör jag, aarch64-linux-gnu-readelf -h hello-static så säger skillnaden något vitigt:<br>
 <img width="683" height="416" alt="Skärmbild 2026-04-23 125822" src="https://github.com/user-attachments/assets/034f7f65-8419-4ff5-9d0d-b38a8ca74f87" /><br>
 
-EXEC = statiskt program<br>
+EXEC = statiskt program, allt verkar finnas i filen och den körs direkt<br>
 Allt finns i filen<br>
 Det körs direkt<br>
-DYN - dynamiskt program (PIE)<br>
+DYN - dynamiskt program (PIE) den behöver ladda bibliotek<br>
 Den behöver ladda bibliotek (libc.so.6)<br>
 Och startas via dynamisk länkare<br>
 'I ELF betyder alltså:'<br>
