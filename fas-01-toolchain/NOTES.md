@@ -64,7 +64,25 @@ Det andra valet jag har att göra är att skippa x86 helt och fokusera på att g
 Detta är det jag kommer att fokusera på istället för att jobba med Docker.<br>
 
 # 3:<br>
-Statisk vs dynamisk länkning, tanken är att förstå vad en ELF-binär faktiskt är, vad den beror på och varför jag har sett att den dyker ofta upp i embedded projekt.
+Statisk vs dynamisk länkning, tanken är att förstå vad en ELF-binär faktiskt är, vad den beror på och varför jag har sett att den dyker ofta upp i embedded projekt.<br>
+<br>
+<br>
+**När ska jag inte använda statiskt?**
+-Verkar som att man inte ska göra det om man har många program som delar samma bibliotek<br>
+**Recovery/rescue-binärer. varför?**
+-I recovery lläge kan systemet vara trasigt en binärfil hittar inte sina .so detta gäller då en dynamisk binär. medans en statisk fungerar ändån för den har inga externa beroenden.<br>
+**Vad gör man med produkter med extremt litet flash. vad vinner då?**
+-Det beror på antal program en statisk kan vinna för att inga .so behövs det är enklare layout och ibland kan den ha mindra antal bibliotek, inga loaders och libs.
+  Många binärer då. då vinner faktiskt dynamiskt för att libc finns bara en gång och varje binr blir liten.
+-Strategin många använder sig av är att använda sig av busybox som är statisk, den har endast en binär med många kommandon eller dynamisk med musl libc som har en liten footprint verkar det som , jag ska gräva lite mer i           detta<br>
+**En produkt som använder många binärer som alla använder libc. vilken vinner då?**
+-Det borde vara att den dynamiska länkningen vinner nästan alltid då flashen via statisk binär innehåller libc och ger dublicering mot att den dynamiska binären så är libc bara en gång. 
+  vad händer i RAM'en då? varje process har en egen kopia om den är statisk och dynamisk så delas det mellan processer.
+  och ska man underhålla så med statisk behövs en rebuild av allt medans dynamisk behöver man bara uppdatera libc...<br>
+<br>
+<br>
+<br>
+
 testar att bygga aarch64-linux-gnu-gcc -o hello-dyn hello.c<br>
 aarch64-linux-gnu-gcc -static -o hello-static hello.c <br> -static säger till linkern att ta med alla bibliotek i binären, för att jämnföra storleken på filen:<br>
 
@@ -104,6 +122,7 @@ Som vi kan se här är så bekräftar det att det är en ELF fil Klass EFL64 men
 Data: little endian som har lägsta byte först vilket är standard för ARM64/x86_64.<br>
 Machine: AArch64 visar att den är Kompilerad för ARM 64-bit (tex. Raspberry Pi 64-bit, ARM-servrar)<br>
 Type: DYN (Position-Independent Executable file) är en viktig punkt som man ska titta lite extra på den visar att det är ett program (inte ett bibliotek) det står DYN, det betyder att det är en PIE (Position Independent Executable)<br>
+<br>
 Vilket menas med att den:<br>
 Laddas på slumpad adress (ASLR)<br>
 Ser ut som ett delat bibliotek internt<br>
