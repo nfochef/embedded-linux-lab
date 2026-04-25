@@ -1,0 +1,19 @@
+# Byggprodukter
+*.o
+*.a
+*.so
+hello
+hello-dyn
+hello-static
+hello-native
+hello-pi
+
+# Editor-skräp
+.vscode/
+.idea/
+*.swp
+*~
+
+# OS-skräp
+.DS_Store
+Thumbs.db
