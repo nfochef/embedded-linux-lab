@@ -1,6 +1,9 @@
 # Fas 2 Buildroot
 Källkod , konfiguration in , image ut och det ska vara repruducerbart..
 
+Tankar innan jag börjar med att bygga Buildrots:
+Jag har inte byggt en Kconfig tidigare, jag kommer använda mig av material som boken "Mastering Embedded Linux Development" och Dels Ai för stöd och struktur.<br>
+
 Klonat  från repo https://gitlab.com/buildroot.org/buildroot.git<br>
 buildroot on  HEAD (0141ca3)<br>
 ❯ git describe<br>
