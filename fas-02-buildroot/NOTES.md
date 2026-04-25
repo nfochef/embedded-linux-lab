@@ -7,3 +7,5 @@ buildroot on  HEAD (0141ca3)<br>
 ls configs/raspberrypizero2w*<br>
 2026.02.1<br>
 configs/raspberrypizero2w_64_defconfig  configs/raspberrypizero2w_defconfig<br>
+
+Valde raspberrypizero2w_64_defconfig för konsistens med min nuvarande 64-bit-setup. Skillnaden mellan defconfigs är target-arkitektur (32 vs 64-bit ARM), trots att det samma fysiska hårdvara.<br>
