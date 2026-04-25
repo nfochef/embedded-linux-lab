@@ -172,6 +172,16 @@ skriver jag make igen får jag make: 'hello' is up to date. men vad är det som 
 -Det berodde på att make jämnför tidsstämplar och inget har ändrats i målfilen el är lika ny som beroenderna då säger den att den är up to date.<br>
 sedan skapade jag en ny med touch hello.c och gjorde make på den då kompilerade den pga att det var en ny tidsstämpel och därför fick jag gcc -o hello hello.c..
 
+Det blev en del felsökning kring Cross_compile i Make och jag lärde mig även att använda cat -A istället för bara cat när jag ville se innehållet i filen. -A = visa alla tecken. då jag hade en del indenteringsfel.<br>
+Andra frågor som uppkom var:<br>
+Men Varför gör man Make framför shell-script? (tidsstämplar, incremental)
+CROSS_COMPILE ?=  varför ?= och inte =?<br>
+.PHONY: clean, vad exakt löser det?<br>
+<br>
+
+Jag fick lite fel i min Make då jag saknade och det gav lite huvudbr, $@ och $< har hängt med sen det var i materialet inför tentan på skolan men att använda det i rätt miljö är en helt annan sak. 
+
+
 
 
 
