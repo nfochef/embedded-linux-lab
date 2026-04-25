@@ -1,7 +1,7 @@
 # Fas 2 Buildroot
 Källkod , konfiguration in , image ut och det ska vara repruducerbart..
 
-Klonat  från repo https://gitlab.com/buildroot.org/buildroot.git
+Klonat  från repo https://gitlab.com/buildroot.org/buildroot.git<br>
 buildroot on  HEAD (0141ca3)<br>
 ❯ git describe<br>
 ls configs/raspberrypizero2w*<br>
