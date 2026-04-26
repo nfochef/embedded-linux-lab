@@ -39,3 +39,7 @@ echo "$PATH" | cat -A<br>
 Min PATH är dublicerad fem gånger och startar en ny shell varje gång, utan att kontrollera om den redan finns..<br>
 Detta måste jag fixa innan jag kan börja bygga Buildroot.<br>
 Jag gör en tillfällig lösning på problemet genom att skapa en ren PATH bara för Buildroot bygget. export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:$HOME/.local/bin"<br>
+
+Första bygget kraschade efter 2h35m på SSL-fel mot github.com vid kernel-nedladdning.. jag bygger om och hoppas att det går denna gången , denna gång bör det inte ta lika lång tid då Buildroot är inkrementellt.<br>
+<img width="311" height="17" alt="Skärmbild 2026-04-26 110752" src="https://github.com/user-attachments/assets/1df3b061-258b-4210-9c88-482e96700907" /><br>
+Tur att alla redan byggda dependencies behålls.<br>
