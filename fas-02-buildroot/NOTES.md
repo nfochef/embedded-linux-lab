@@ -13,3 +13,8 @@ ls configs/raspberrypizero2w*<br>
 configs/raspberrypizero2w_64_defconfig  configs/raspberrypizero2w_defconfig<br>
 
 Valde raspberrypizero2w_64_defconfig för konsistens med min nuvarande 64-bit-setup. Skillnaden mellan defconfigs är target-arkitektur (32 vs 64-bit ARM), trots att det samma fysiska hårdvara.<br>
+
+Nyfikenheten tog mig mot att kolla in Kconfig för att navigera runt i menyerna för att greppa lite på hur det är gjort, körde make menuconfig och resultatet:<br>
+<img width="890" height="419" alt="Skärmbild 2026-04-26 073047" src="https://github.com/user-attachments/assets/ed2ce965-47f3-4f3c-95ed-23b55a9c8b6d" /><br>
+<br>
+
