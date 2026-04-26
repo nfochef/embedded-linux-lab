@@ -43,3 +43,7 @@ Jag gör en tillfällig lösning på problemet genom att skapa en ren PATH bara 
 Första bygget kraschade efter 2h35m på SSL-fel mot github.com vid kernel-nedladdning.. jag bygger om och hoppas att det går denna gången , denna gång bör det inte ta lika lång tid då Buildroot är inkrementellt.<br>
 <img width="311" height="17" alt="Skärmbild 2026-04-26 110752" src="https://github.com/user-attachments/assets/1df3b061-258b-4210-9c88-482e96700907" /><br>
 Tur att alla redan byggda dependencies behålls.<br>
+Build klar!<br>
+<img width="525" height="62" alt="Skärmbild 2026-04-26 120315" src="https://github.com/user-attachments/assets/ca23e5b0-2be4-4b4a-ac4a-6b716a697928" /><br>
+ARM64 den har rätt arkitektur : Check!
+boot executable ..det är inte en vanlig ELF utan den är en specifik bootbar.<br>
