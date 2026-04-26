@@ -4,9 +4,9 @@ Reproducerbarhet är minst lika viktigt som minimalism som den erhåller, produk
 
 Tankar innan jag börjar med att bygga Buildrots:
 Jag har inte byggt en Kconfig tidigare, jag kommer använda mig av material som boken 
-**Mastering Embedded Linux Development** 
-**https://buildroot.org/docs.html**
-**https://buildroot.org/downloads/manual/manual.html**
+**Mastering Embedded Linux Development** <br>
+**https://buildroot.org/docs.html**<br>
+**https://buildroot.org/downloads/manual/manual.html**<br>
 och Dels Ai för stöd och struktur.<br>
 
 Klonat  från repo https://gitlab.com/buildroot.org/buildroot.git<br>
