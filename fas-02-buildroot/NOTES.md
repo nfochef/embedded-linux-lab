@@ -38,4 +38,4 @@ echo "$PATH"<br>
 echo "$PATH" | cat -A<br>
 Min PATH är dublicerad fem gånger och startar en ny shell varje gång, utan att kontrollera om den redan finns..<br>
 Detta måste jag fixa innan jag kan börja bygga Buildroot.<br>
-Lösning på problemet blir att skapa en ren PATH bara för Buildroot bygget.<br>
+Jag gör en tillfällig lösning på problemet genom att skapa en ren PATH bara för Buildroot bygget. export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:$HOME/.local/bin"<br>
