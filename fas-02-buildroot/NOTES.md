@@ -23,3 +23,19 @@ Körde make menuconfig, resultatet blir:<br>
 <img width="890" height="419" alt="Skärmbild 2026-04-26 073047" src="https://github.com/user-attachments/assets/ed2ce965-47f3-4f3c-95ed-23b55a9c8b6d" /><br>
 <br>
 
+Bygget startas genom kommando som:
+make - startar bygget
+2>&1 - slår ihop stdout och stderr
+| tee build.log - visar output i terminalen och sparar till fil.
+
+make 2>&1 | tee build.log<br>
+
+<img width="795" height="128" alt="Skärmbild 2026-04-26 080347" src="https://github.com/user-attachments/assets/f782195d-173f-46d0-9eab-40e25bbca648" /><br>
+
+Buildroot vägrar bygga med skadat PATH så den logiska lösningen för spaces i PATH är att de bryter sönder Make-byggen... 
+I WSL2 ärver Windows PATH automatiskt, och flera Windows-paths innehåller spaces detta blir väldigt visuellt när man kör<br>
+echo "$PATH"<br>
+echo "$PATH" | cat -A<br>
+Min PATH är dublicerad fem gånger och startar en ny shell varje gång, utan att kontrollera om den redan finns..<br>
+Detta måste jag fixa innan jag kan börja bygga Buildroot.<br>
+Lösning på problemet blir att skapa en ren PATH bara för Buildroot bygget.<br>
