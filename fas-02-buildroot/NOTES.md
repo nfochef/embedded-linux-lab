@@ -51,3 +51,7 @@ boot executable ..det är inte en vanlig ELF utan den är en specifik bootbar.<b
 
 Genom att mounta image-filen via sudo mount -o loop,ro rootfs.ext2 ~/mnt/buildroot-rootfs så kan jag kolla in Linux-distron<br>
 <img width="653" height="658" alt="Skärmbild 2026-04-27 083915" src="https://github.com/user-attachments/assets/83d5f438-3f7c-4ab3-81fc-f8631f6c2e73" /><br><br>
+
+Så varje rad med -> är en symlink till busybox det vill säga att det är en fil som pekar på en annan fil själva Busybox är ett program som samlar flera Unix-verktyg i en enda exekverbar fil.<br>
+Om en symlink som heter ls finns och pekar på busybox, så innebär det att när du skriver ls i terminalen så körs faktiskt busybox ls..<br>
+Jag trodde den komprimerar filerna vilket var fel för det är en enda C-binär-fil och används där det inte fins utrymme el behovet av att ha många seperata program.<br>
