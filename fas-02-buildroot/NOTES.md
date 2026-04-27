@@ -47,3 +47,7 @@ Build klar!<br>
 <img width="525" height="62" alt="Skärmbild 2026-04-26 120315" src="https://github.com/user-attachments/assets/ca23e5b0-2be4-4b4a-ac4a-6b716a697928" /><br>
 ARM64 den har rätt arkitektur : Check!
 boot executable ..det är inte en vanlig ELF utan den är en specifik bootbar.<br>
+
+
+Genom att mounta image-filen via sudo mount -o loop,ro rootfs.ext2 ~/mnt/buildroot-rootfs så kan jag kolla in Linux-distron<br>
+<img width="653" height="658" alt="Skärmbild 2026-04-27 083915" src="https://github.com/user-attachments/assets/83d5f438-3f7c-4ab3-81fc-f8631f6c2e73" /><br><br>
