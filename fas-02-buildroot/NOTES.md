@@ -83,5 +83,5 @@ Systemet ligger på kanske runt 50-100 binärer i hela systemet.. och jämnför 
 Vad som saknas är ett grafiskt gränsnitt som X-server el Wayland + GUI bibliotek vilket en embedded enhet inte behöver.<br>
 
 
-
+# **Boot i QEMU**
 
