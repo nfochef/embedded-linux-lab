@@ -84,4 +84,7 @@ Vad som saknas är ett grafiskt gränsnitt som X-server el Wayland + GUI bibliot
 
 
 # **Boot i QEMU**
+Qemu , tidigare okänt för mig man simulerar en hel maskin, kör hel kernel + rootfs sen kan man göra en User-mode emulation då man kör enskild binär från annan arkitektur. <br>
+Installerade med **sudo apt install -y qemu-system-arm qemu-util**<br>
+<img width="510" height="64" alt="Skärmbild 2026-04-28 115648" src="https://github.com/user-attachments/assets/cbd524fd-2e47-46c8-814f-5d20750d18cf" /><br>
 
