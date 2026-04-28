@@ -72,5 +72,16 @@ Busybox är vekligen minimalt och tar inte stor plats (en enda kompakt binär so
 **rootfs.ext4 - rootfs.ext2** = är en symlink till samma fil, två namn bara en fil.
 **rpi-firmware/** = Behövs för boot och är GPU firmware och den är inte open-source "Broadcom."              
 **sdcard.img** = Allt ihopsatt till en slutproduct som är en flashbar fil. 
+<br>
+Buildroot-default använder BusyBox<br>
+Systemd är alternativet <br>
+När ska man välja vad?<br>
+Man väljer kanske Systemd när flera tjänster måste startas i rätt ordning, övervakas och automatiskt återstartas. Där väger systemd:s beroendehantering, loggning och service-övervakning tyngre än nackdelen i lagringsstorlek.<br>
+
+Jämnförelse:<br>
+Systemet ligger på kanske runt 50-100 binärer i hela systemet.. och jämnför man mot ubuntu som har ca 3000 binärer för att täcka ett "all around" system så får man en väldigt tydlig bild av att Buildrot är överlägs minimal i storlek.
+Vad som saknas är ett grafiskt gränsnitt som X-server el Wayland + GUI bibliotek vilket en embedded enhet inte behöver.<br>
+
+
 
 
