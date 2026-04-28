@@ -88,3 +88,7 @@ Qemu , tidigare okänt för mig man simulerar en hel maskin, kör hel kernel + r
 Installerade med **sudo apt install -y qemu-system-arm qemu-util**<br>
 <img width="510" height="64" alt="Skärmbild 2026-04-28 115648" src="https://github.com/user-attachments/assets/cbd524fd-2e47-46c8-814f-5d20750d18cf" /><br>
 
+Innan jag börjar så upptäckte jag att QEMU inte stödjer Pi Zero 2W specifikt och Generisk emulering räcker inte,.
+Lösning:<br>
+En lösning är att jag skippar PI specifika delar så QEMU tar bara Image och rootfs.ext2 och använder dem på en generisk virtuell maskin , det kommer funka och jag får login. men blir inte en Pi emulering.<br>
+
