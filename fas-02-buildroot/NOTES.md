@@ -63,7 +63,7 @@ Genom att mounta image-filen via sudo mount -o loop,ro rootfs.ext2 ~/mnt/buildro
 Så varje rad med -> är en symlink till busybox det vill säga att det är en fil som pekar på en annan fil själva Busybox är ett program som samlar flera Unix-verktyg i en enda exekverbar fil.<br>
 Om en symlink som heter ls finns och pekar på busybox, så innebär det att när du skriver ls i terminalen så körs faktiskt busybox ls..<br>
 Jag trodde den komprimerar filerna vilket var fel för det är en enda C-binär-fil och används där det inte fins utrymme el behovet av att ha många seperata program.<br>
-Busybox är vekligen minimalt och tar inte stor plats (en enda kompakt binär som ersätter många klassiska Unix-verktyg) <br>
+Busybox är vekligen minimalt och tar inte stor plats (en enda kompakt binär som ersätter många klassiska Unix-verktyg) Samt BusyBox startar snabbare eftersom systemet bara behöver slå upp och läsa in en enda binär istället för många små filer, vilket minskar I/O- och filsystem-overhead.<br>
 
 **Image** Linux Kernel ARM64                    
 **bcm2710-rpi-zero-2-w.dtb** = Device tree blob och beskriver hårdvaru modellen  
