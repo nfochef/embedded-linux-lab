@@ -92,3 +92,15 @@ Innan jag börjar så upptäckte jag att QEMU inte stödjer Pi Zero 2W specifikt
 Lösning:<br>
 En lösning är att jag skippar PI specifika delar så QEMU tar bara Image och rootfs.ext2 och använder dem på en generisk virtuell maskin , det kommer funka och jag får login. men blir inte en Pi emulering.<br>
 
+Kommando för att starta QEMU:
+qemu-system-aarch64 \<br>
+  -M virt \<br>
+  -cpu cortex-a53 \<br>
+  -smp 2 \<br>
+  -m 1024 \<br>
+  -kernel Image \<br>
+  -drive file=rootfs-qemu.ext2,if=none,format=raw,id=hd0 \<br>
+  -device virtio-blk-device,drive=hd0 \<br>
+  -append "root=/dev/vda console=ttyAMA0 rw" \<br>
+  -nographic<br>
+
