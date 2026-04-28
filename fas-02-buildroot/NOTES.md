@@ -59,9 +59,8 @@ Busybox är vekligen minimalt och tar inte stor plats. <br>
 
 **Image** Linux Kernel ARM64                    
 **bcm2710-rpi-zero-2-w.dtb** = Device tree blob och beskriver hårdvaru modellen  
-boot.vfat = Dess FAT system på SD kort har Pi:n alltid en FAT-partition först. Vilket är den enda typ av filsystem som Pi:ns firmware direkt kan läsa vid uppstart.      
-genimage.cfg = Är ett "recept" som beskriver hur sdcard.img ska sättas ihop av de andra delarna.              
-rootfs.ext2 = Där hela Linux systemet bor dvs /bin/user/bin/etc/home/var/lib/usr/lib/boot/dev/proc/sys etc. man kan kalla det för typ start nyckel               
-rootfs.ext4 - rootfs.ext2 = är en symlink till samma fil, två namn bara en fil. kan heta ext4 på modernare system.
-rpi-firmware/ = Behövs för boot och är GPU firmware och den är inte open-source "Broadcom"              
-sdcard.img = Allt ihopsatt till en slutproduct som är en flashbar fil. 
+**boot.vfat** = Dess FAT system på SD kort har Pi:n alltid en FAT-partition först. Vilket är den enda typ av filsystem som Pi:ns firmware direkt kan läsa vid uppstart.     **genimage.cfg** = Är ett "recept" som beskriver hur sdcard.img ska sättas ihop av de andra delarna.              
+**rootfs.ext2** = Där hela Linux systemet bor dvs /bin/user/bin/etc/home/var/lib/usr/lib/boot/dev/proc/sys etc. man kan kalla det för typ start nyckel               
+**rootfs.ext4 - rootfs.ext2** = är en symlink till samma fil, två namn bara en fil. kan heta ext4 på modernare system.
+**rpi-firmware/** = Behövs för boot och är GPU firmware och den är inte open-source "Broadcom"              
+**sdcard.img** = Allt ihopsatt till en slutproduct som är en flashbar fil. 
