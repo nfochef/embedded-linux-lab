@@ -31,7 +31,15 @@ make - startar bygget
 make 2>&1 | tee build.log<br>
 
 <img width="795" height="128" alt="Skärmbild 2026-04-26 080347" src="https://github.com/user-attachments/assets/f782195d-173f-46d0-9eab-40e25bbca648" /><br>
-
+<br>
+Så Buildroot i korthet:<br>
+Extremt liten footprint <br>
+Flexible konfiguration<br>
+Snabb uppstart<br>
+Mindre Beroenden <br>
+Standaliserad Unix känsla<br>
+Beprövat i hela ekosystemet<br>
+<br>
 Buildroot vägrar bygga med skadat PATH så den logiska lösningen för spaces i PATH är att de bryter sönder Make-byggen... 
 I WSL2 ärver Windows PATH automatiskt, och flera Windows-paths innehåller spaces detta blir väldigt visuellt när man kör<br>
 echo "$PATH"<br>
@@ -55,12 +63,14 @@ Genom att mounta image-filen via sudo mount -o loop,ro rootfs.ext2 ~/mnt/buildro
 Så varje rad med -> är en symlink till busybox det vill säga att det är en fil som pekar på en annan fil själva Busybox är ett program som samlar flera Unix-verktyg i en enda exekverbar fil.<br>
 Om en symlink som heter ls finns och pekar på busybox, så innebär det att när du skriver ls i terminalen så körs faktiskt busybox ls..<br>
 Jag trodde den komprimerar filerna vilket var fel för det är en enda C-binär-fil och används där det inte fins utrymme el behovet av att ha många seperata program.<br>
-Busybox är vekligen minimalt och tar inte stor plats. <br>
+Busybox är vekligen minimalt och tar inte stor plats (en enda kompakt binär som ersätter många klassiska Unix-verktyg) <br>
 
 **Image** Linux Kernel ARM64                    
 **bcm2710-rpi-zero-2-w.dtb** = Device tree blob och beskriver hårdvaru modellen  
-**boot.vfat** = Dess FAT system på SD kort har Pi:n alltid en FAT-partition först. Vilket är den enda typ av filsystem som Pi:ns firmware direkt kan läsa vid uppstart.     **genimage.cfg** = Är ett "recept" som beskriver hur sdcard.img ska sättas ihop av de andra delarna.              
-**rootfs.ext2** = Där hela Linux systemet bor dvs /bin/user/bin/etc/home/var/lib/usr/lib/boot/dev/proc/sys etc. man kan kalla det för typ start nyckel               
-**rootfs.ext4 - rootfs.ext2** = är en symlink till samma fil, två namn bara en fil. kan heta ext4 på modernare system.
-**rpi-firmware/** = Behövs för boot och är GPU firmware och den är inte open-source "Broadcom"              
+**boot.vfat** = Dess FAT system på SD kort har Pi:n alltid en FAT-partition först. Vilket är den enda typ av filsystem som Pi firmware direkt kan läsa vid uppstart.     **genimage.cfg** = Är ett "recept" som beskriver hur sdcard.img ska sättas ihop av de andra delarna.              
+**rootfs.ext2** = Där hela Linux systemet bor dvs /bin/user/bin/etc/home/var/lib/usr/lib/boot/dev/proc/sys etc. man kan kalla det för rotfilsystem.              
+**rootfs.ext4 - rootfs.ext2** = är en symlink till samma fil, två namn bara en fil.
+**rpi-firmware/** = Behövs för boot och är GPU firmware och den är inte open-source "Broadcom."              
 **sdcard.img** = Allt ihopsatt till en slutproduct som är en flashbar fil. 
+
+
