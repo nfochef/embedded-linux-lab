@@ -104,3 +104,20 @@ qemu-system-aarch64 \
   -append "root=/dev/vda console=ttyAMA0 rw" \
   -nographic
 
+Vilket gav ett felmeddelande : **Kernel panic - not syncing: VFS: Unable to mount root fs on unknown-block(0,0)**
+den verkar inte kunna hitta blockenheten, dvs den har inget os att ladda. 
+Varför kan den ej hitta enheten som jag bad den om i flaggorna?
+
+-append "root=/dev/vda console=ttyAMA0 rw" — kernel-parametrar:
+root=/dev/vda, kerneln ska mounta /dev/vda (vår virtio-disk) som /
+console=ttyAMA0 och visa kernel-loggar på serielle UART (ARM-standard)
+
+Problemet är som jag nämde innan att min Image är gjord för Pi Zero 2W och den har inte virtio-stöd och när man tar den till en virtuell maskin som bara har virtio-hårdvara hittar den ingen disk. Det jag kan göra nu är att Ge kerneln en disk den känner igen,
+eller ladda om rootfs som en initramfs istället dvs, att den laddas in i RAM av kernel direkt vid boot , ingen blockenhet behövs då.
+
+
+
+
+
+  
+
