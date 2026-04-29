@@ -205,19 +205,27 @@ CC ?= gcc
 CFLAGS ?= -Wall -O2
 
 hello: hello.c
-  $(CC) $(CFLAGS) -o hello hello.c
+ - $(CC) $(CFLAGS) -o hello hello.c
 
 clean:
-  rm -f hello
+ - rm -f hello
 
 install: 
-  install -D -m 0755 hello $(DESTDIR)/usr/bin/hello
+ - install -D -m 0755 hello $(DESTDIR)/usr/bin/hello
 
 .PHONY: clean install
 EOF
+((-m 0755 = sätt permissions till rwxr-xr-x))
 
+Sen behöver jag skapa andra behvliga delen i recipe (Config.in)
+cat > ~/ws/buildroot/package/hello/Config.in << 'EOF'<br>
+config BR2_PACKAGE_HELLO
+-bool "hello"
+-help
+	 -- A simple hello program for learning Buildroot package recipes.
 
-
+	  https://github.com/nfochef/embedded-linux-lab
+EOF
 
 
 
