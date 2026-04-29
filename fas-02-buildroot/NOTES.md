@@ -200,7 +200,7 @@ Det behövs även registrera paketet i package/Config.in så Buildroot vet att d
 Jag skapar paket katalogen **mkdir -p package/hello/src** jag tar och kopierar in min källkod från tidigare fas. 
 och skapar en ny Makefile för paketet.
 
-cat > ~/ws/buildroot/pagage/hello/src/Makefile << 'EOF'
+cat > ~/ws/buildroot/pagage/hello/src/Makefile << 'EOF'<br>
 CC ?= gcc
 CFLAGS ?= -Wall -O2
 
