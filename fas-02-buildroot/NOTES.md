@@ -166,23 +166,23 @@ Jag skapade ett mindre problem för mig själv då jag ville se om min config sp
 Buildroot kunde inte generera start-qemu.sh automatiskt för min custom defconfig (något i board/qemu/post-image.sh-logiken hoppade över min qemu_aarch64_lab_defconfig, namngivning matchade en exit 0-condition).
 Noterade även att medlevererade hjälpscript är ofta knutna till specifika defconfig-namn eller readme.txt-konventioner. När jag gör custom defconfig kan jag inte räkna med att alla helper-scripts genereras. Det jag gjorde av bekvämlighet var att skapa mitt egna start-script och commita det med min defconfig.<br>
 
-cd ~/ws/buildroot/output/images/<br>
-cat > start-lab.sh << 'EOF'<br>
-#!/bin/bash<br>
-exec qemu-system-aarch64 \<br>
-  -M virt \<br>
-  -cpu cortex-a53 \<br>
-  -nographic \<br>
-  -smp 1 \<br>
-  -kernel Image \<br>
-  -append "rootwait root=/dev/vda console=ttyAMA0" \<br>
-  -netdev user,id=eth0 \<br>
-  -device virtio-net-device,netdev=eth0 \<br>
-  -drive file=rootfs.ext4,if=none,format=raw,id=hd0 \<br>
-  -device virtio-blk-device,drive=hd0<br>
+cd ~/ws/buildroot/output/images/
+cat > start-lab.sh << 'EOF'
+#!/bin/bash
+exec qemu-system-aarch64 \
+  -M virt \
+  -cpu cortex-a53 \
+  -nographic \
+  -smp 1 \
+  -kernel Image \
+  -append "rootwait root=/dev/vda console=ttyAMA0" \
+  -netdev user,id=eth0 \
+  -device virtio-net-device,netdev=eth0 \
+  -drive file=rootfs.ext4,if=none,format=raw,id=hd0 \
+  -device virtio-blk-device,drive=hd0
 EOF<br>
 
-chmod +x start-lab.sh<br>
+chmod +x start-lab.sh
 
 Nu kan jag starta med ./start-lab.sh<br>
 
