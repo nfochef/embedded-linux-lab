@@ -146,7 +146,22 @@ Detta steg görs allt genom terminalen med kommandot: make menuconfig
 
 .config är bara en textfil med KEY=value. Hela menuconfig är bara ett gränssnitt för att redigera den. man kunde teoretiskt redigera .config direkt med vim det hade fungerat men menuconfig hanterar dependencies (vissa paket kräver att andra också är aktiverade)
 
+Bygger om efter ändringarna.
+**make 2>&1 | tee build-custom.log**
+
+Loggar in och testar att köra # htop:   
+<img width="633" height="343" alt="Skärmbild 2026-04-29 091051" src="https://github.com/user-attachments/assets/36caf46d-6e90-4c5b-8f1c-c7f32a295d53" />
+Det funkade nu ser vi alla processer..
+det jag nu behöver göra är att spara konfigurationen som en egen defconfig vilket är viktigt steg för reproducerbarhet. Mina ändrignar finns bara i output/.config verkar det som om jag nu gör en **make clean** så raderar den bara output/, inte dl/ eller configs/. 
+Eftersom jag sparade min defconfig till configs/qemu_aarch64_lab_defconfig innan clean kunde jag återskapa konfigurationen direkt. Disciplin: spara som defconfig så fort en customization är klar, sen är clean ofarligt.
+<br>
+**make savedefconfig BR2_DEFCONFIG=configs/qemu_aarch64_lab_defconfig** 
+jag behöver bryta ner detta kommando för att förstå det helt:
+savedefconfig = spara minimal version av min nuvarande konfiguration. den tar min .config och rensarbort allt som är standardvärden så bara ändringar blir kvar.
+BR2_DEFCONFIG = detta är en variabel som jag skickar till make, den säger till make vart konfigurationsfilen ska sparas. 
+**Detta är standard metod i Bildroots när man skapar egna TARGETS..** 
 
 
-  
+
+
 
