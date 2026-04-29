@@ -84,6 +84,8 @@ Vad som saknas är ett grafiskt gränsnitt som X-server el Wayland + GUI bibliot
 
 
 # **Boot i QEMU**
+QEMU emulerar maskiner i mjukvara. För embedded-arbete betyder det att jag kan testa kernel- och rootfs-ändringar utan att flasha hårdvara genom snabb iteration. Och om ett team har "50" enheter ute i fält kan vi reproducera buggar lokalt utan att skicka enheter fram och tillbaka.<br>
+Detta är ju väldigt bra tidsbesparing.<br>
 Qemu , tidigare okänt för mig man simulerar en hel maskin, kör hel kernel + rootfs sen kan man göra en User-mode emulation då man kör enskild binär från annan arkitektur. <br>
 Installerade med **sudo apt install -y qemu-system-arm qemu-util**<br>
 <img width="510" height="64" alt="Skärmbild 2026-04-28 115648" src="https://github.com/user-attachments/assets/cbd524fd-2e47-46c8-814f-5d20750d18cf" /><br>
@@ -116,6 +118,8 @@ Problemet är som jag nämde innan att min Image är gjord för Pi Zero 2W och d
 eller ladda om rootfs som en initramfs istället dvs, att den laddas in i RAM av kernel direkt vid boot , ingen blockenhet behövs då.
 Jag behövde rådfråga ai om hur jag ska gå till väga och den föreslog att jag skulle bygga en paralell qemu-image.
 Då fördelarna var att jag faktiskt få se att min egna distro boota och kunna logga in i den och då vet jag om den funkar, inte att jag tror det funkar.
+Det gav mig insikten att en kernel-image är bunden till sina hårdvaruval i konfig genom att flytta den till annan hårdvara kräver matchande drivers eller en helt annan kernel.
+
 
 Buildroots output/ innehåller både byggcache och artefakter. När man flyttar output/ förlorar man toolchain-byggcache och måste bygga om från noll. För att spara tid mellan parallella builds: behåll output/ per defconfig, växla med mv. För riktigt parallell hantering: använd Buildroots O=path för att specificera output-katalog per bygge.
 
