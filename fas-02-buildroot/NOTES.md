@@ -141,6 +141,11 @@ Mål att ändra Buildroot imagen från mall till min image.
  - lägga till paket (htop som är ett interaktivt process övervakings verktyg)
  - Bygga om imagen efter detta. 
 
+Detta steg görs allt genom terminalen med kommandot: make menuconfig
+<img width="894" height="421" alt="Skärmbild 2026-04-29 084312" src="https://github.com/user-attachments/assets/13e99a73-004a-47f9-b539-c1610872dbba" /><br>
+
+.config är bara en textfil med KEY=value. Hela menuconfig är bara ett gränssnitt för att redigera den. man kunde teoretiskt redigera .config direkt med vim det hade fungerat men menuconfig hanterar dependencies (vissa paket kräver att andra också är aktiverade)
+
 
 
   
