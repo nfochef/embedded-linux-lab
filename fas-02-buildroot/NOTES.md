@@ -217,15 +217,15 @@ install:
 EOF
 ((-m 0755 = sätt permissions till rwxr-xr-x))<br>
 
-Sen behöver jag skapa andra behvliga delen i recipe (Config.in)
+Sen behöver jag skapa andra behvliga delen i recipe (Config.in)<br>
 cat > ~/ws/buildroot/package/hello/Config.in << 'EOF'<br>
-config BR2_PACKAGE_HELLO
-bool "hello"
-help
-	  A simple hello program for learning Buildroot package recipes.
+config BR2_PACKAGE_HELLO<br>
+bool "hello"<br>
+help<br>
+	  A simple hello program for learning Buildroot package recipes.<br>
 
 	  https://github.com/nfochef/embedded-linux-lab
-EOF
+EOF<br>
 
 
 
