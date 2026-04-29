@@ -168,7 +168,7 @@ Noterade även att medlevererade hjälpscript är ofta knutna till specifika def
 
 cd ~/ws/buildroot/output/images/<br>
 cat > start-lab.sh << 'EOF'<br>
-#!/bin/bash
+#!/bin/bash<br>
 exec qemu-system-aarch64 \
   M virt \
   cpu cortex-a53 \
