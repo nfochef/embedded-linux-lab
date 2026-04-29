@@ -157,8 +157,8 @@ Eftersom jag sparade min defconfig till configs/qemu_aarch64_lab_defconfig innan
 <br>
 **make savedefconfig BR2_DEFCONFIG=configs/qemu_aarch64_lab_defconfig** <br>
 jag behöver bryta ner detta kommando för att förstå det helt:<br>
-savedefconfig = spara minimal version av min nuvarande konfiguration. den tar min .config och rensarbort allt som är standardvärden så bara ändringar blir kvar.
-BR2_DEFCONFIG = detta är en variabel som jag skickar till make, den säger till make vart konfigurationsfilen ska sparas. 
+**savedefconfig** = spara minimal version av min nuvarande konfiguration. den tar min .config och rensarbort allt som är standardvärden så bara ändringar blir kvar.<br>
+**BR2_DEFCONFIG** = detta är en variabel som jag skickar till make, den säger till make vart konfigurationsfilen ska sparas. 
 **Detta är standard metod i Bildroots när man skapar egna TARGETS..** 
 
 
