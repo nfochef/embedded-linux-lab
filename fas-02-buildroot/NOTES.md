@@ -157,7 +157,7 @@ Eftersom jag sparade min defconfig till configs/qemu_aarch64_lab_defconfig innan
 <br>
 **make savedefconfig BR2_DEFCONFIG=configs/qemu_aarch64_lab_defconfig** <br>
 jag behöver bryta ner detta kommando för att förstå det helt:<br>
-**savedefconfig** = spara minimal version av min nuvarande konfiguration. den tar min .config och rensarbort allt som är standardvärden så bara ändringar blir kvar.<br>
+**savedefconfig** = spara minimal version av min nuvarande konfiguration. den tar min .config och rensar bort allt som är standardvärden så bara ändringar blir kvar.<br>
 **BR2_DEFCONFIG** = detta är en variabel som jag skickar till make, den säger till make vart konfigurationsfilen ska sparas. 
 **Detta är standard metod i Bildroots när man skapar egna TARGETS..** 
 
@@ -188,8 +188,33 @@ Nu kan jag starta med ./start-lab.sh<br>
 
 
 
+# Baka in min mjukvara i imagen "Package recipe"
+Hur tar jag min hello.c till ett Buildroot paket?
+Begrepp att förstå: 
+Package recipe är en samling filer i package/<paketnamn>/ och innehåller minimul tre filer.
+ - config.in - Kconfig del som lägger in mitt paket i make menuconfig menyn.
+ - <paketnamn>.mk - Makefile del som beskriver hur paketet byggs
+ - hello.c el vad man nu vill ha, kan ligga i paketet el hämtas från extern URL.
+Det behövs även registrera paketet i package/Config.in så Buildroot vet att det finns. 
 
+Jag skapar paket katalogen **mkdir -p package/hello/src** jag tar och kopierar in min källkod från tidigare fas. 
+och skapar en ny Makefile för paketet.
 
+cat > ~/ws/buildroot/pagage/hello/src/Makefile << 'EOF'
+CC ?= gcc
+CFLAGS ?= -Wall -O2
+
+hello: hello.c
+  $(CC) $(CFLAGS) -o hello hello.c
+
+clean:
+  rm -f hello
+
+install: 
+  install -D -m 0755 hello $(DESTDIR)/usr/bin/hello
+
+.PHONY: clean install
+EOF
 
 
 
