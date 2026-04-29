@@ -125,8 +125,7 @@ tail -f build-qemu.log<br>
 <img width="313" height="20" alt="Skärmbild 2026-04-28 154459" src="https://github.com/user-attachments/assets/da0da305-a4eb-478f-8008-2afb91ed5341" /><br>
 <br>
 <img width="902" height="261" alt="Skärmbild 2026-04-28 154849" src="https://github.com/user-attachments/assets/5ffe99e0-07e2-415c-928c-46e4104bc9b4" /><br>
-<br>
-Så Buildroot utvecklarna har gjort ett start script med rätt QEMU flaggor för denna defconfig. <br>
+Så Buildroot utvecklarna har gjort ett start script med rätt QEMU flaggor för denna defconfig "start-qemu.sh". <br>
 <img width="548" height="59" alt="Skärmbild 2026-04-28 155611" src="https://github.com/user-attachments/assets/a9c565a7-e1c8-4fa4-b6e4-9787f43c4825" />
 
 Vid inlogg så blev det väl inget wow intryck då det ser ut som vanlig Linux-shell, men när jag tänker på vad jag har skapat så ändras bilden lite jag har byggt ett komplett Linux-system från källkod, från noll. Toolchain, kernel, BusyBox, init, libc, allt och kompilerat med egen Makefile config. Då förstår jag hur stort det är (iallafall för mig).<br>
