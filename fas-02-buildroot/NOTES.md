@@ -166,8 +166,8 @@ Jag skapade ett mindre problem för mig själv då jag ville se om min config sp
 Buildroot kunde inte generera start-qemu.sh automatiskt för min custom defconfig (något i board/qemu/post-image.sh-logiken hoppade över min qemu_aarch64_lab_defconfig, namngivning matchade en exit 0-condition).
 Noterade även att medlevererade hjälpscript är ofta knutna till specifika defconfig-namn eller readme.txt-konventioner. När jag gör custom defconfig kan jag inte räkna med att alla helper-scripts genereras. Det jag gjorde av bekvämlighet var att skapa mitt egna start-script och commita det med min defconfig.<br>
 
-cd ~/ws/buildroot/output/images/
-cat > start-lab.sh << 'EOF'
+cd ~/ws/buildroot/output/images/<br>
+cat > start-lab.sh << 'EOF'<br>
 #!/bin/bash
 exec qemu-system-aarch64 \
   M virt \
