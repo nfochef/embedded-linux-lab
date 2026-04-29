@@ -134,6 +134,12 @@ Så Buildroot utvecklarna har gjort ett start script med rätt QEMU flaggor för
 
 Vid inlogg så blev det väl inget wow intryck då det ser ut som vanlig Linux-shell, men när jag tänker på vad jag har skapat så ändras bilden lite jag har byggt ett komplett Linux-system från källkod, från noll. Toolchain, kernel, BusyBox, init, libc, allt och kompilerat med egen Makefile config. Då förstår jag hur stort det är (iallafall för mig).<br>
 
+# Customization
+Mål att ändra Buildroot imagen från mall till min image.
+ - ändra användarnamn.
+ - skapa nytt lösenord.
+ - lägga till paket (htop som är ett interaktivt process övervakings verktyg)
+ - Bygga om imagen efter detta. 
 
 
 
