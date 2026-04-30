@@ -227,8 +227,31 @@ help<br>
 	  https://github.com/nfochef/embedded-linux-lab
 EOF<br>
 
+Och sista filen **.MK**
+
+cat > ~/ws/buildroot/package/hello/hello.mk << 'EOF'
 
 
+ hello
+
+
+
+HELLO_VERSION = 1.0
+HELLO_SITE = ./package/hello/src
+HELLO_SITE_METHOD = local
+HELLO_LICENSE = MIT
+
+define HELLO_BUILD_CMDS
+	$(MAKE) CC="$(TARGET_CC)" -C $(@D)
+endef
+
+define HELLO_INSTALL_TARGET_CMDS
+	$(MAKE) -C $(@D) install DESTDIR=$(TARGET_DIR)
+endef
+
+$(eval $(generic-package))
+EOF
+$(eval $(generic-package)) Aktiverar Buildroots generiska paket-infrastruktur som hanterar nedladdning, extrahering, patching, build-step, install-step, etc.
 
 
 
