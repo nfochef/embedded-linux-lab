@@ -253,5 +253,6 @@ $(eval $(generic-package))
 EOF
 $(eval $(generic-package)) Aktiverar Buildroots generiska paket-infrastruktur som hanterar nedladdning, extrahering, patching, build-step, install-step, etc.
 
+Behöver lägga in paket-recepten på disk och behöver lägga till dem i den globala menyn så Buildroot vet att de finns. 
 
 
