@@ -253,9 +253,9 @@ $(eval $(generic-package))
 EOF
 $(eval $(generic-package)) Aktiverar Buildroots generiska paket-infrastruktur som hanterar nedladdning, extrahering, patching, build-step, install-step, etc.
 
-Behöver lägga in paket-recepten på disk och behöver lägga till dem i den globala menyn så Buildroot vet att de finns. 
-nano ~/ws/buildroot/package/Config.in
-läggs in under den kategori som faller in på firmwaret, denna la jag under misc.
-source "package/hello/Config.in"
+Behöver lägga in paket-recepten på disk och behöver lägga till dem i den globala menyn så Buildroot vet att de finns. <br>
+nano ~/ws/buildroot/package/Config.in<br>
+läggs in under den kategori som faller in på firmwaret, denna la jag under misc.<br>
+source "package/hello/Config.in"<br>
 
 
