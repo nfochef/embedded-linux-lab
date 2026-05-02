@@ -1,0 +1,6 @@
+config BR2_PACKAGE_HELLO
+	bool "hello"
+	help
+	  A simple hello-world program for learning Buildroot package recipes.
+
+	  https://github.com/nfochef/embedded-linux-lab
