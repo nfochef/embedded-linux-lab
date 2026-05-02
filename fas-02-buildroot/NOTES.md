@@ -258,4 +258,15 @@ nano ~/ws/buildroot/package/Config.in<br>
 läggs in under den kategori som faller in på firmwaret, denna la jag under misc.<br>
 source "package/hello/Config.in"<br>
 
+Aktivering av paketet via make menuconfig
+[] hello<br>
+Markerar hello med space och missade steget att bygga om imagen med make 2>1 | tee build-hello.log<br>
+
+<img width="344" height="151" alt="Skärmbild 2026-05-02 085951" src="https://github.com/user-attachments/assets/eb3e4d6c-380e-4da6-92a7-6740da99bef9" /><br>
+
+Min första paket integration som ett Buildroot recept! resultatet blir då en distro där hello är förinstallerad och redo att köras. KUL!
+
+
+
+
 
