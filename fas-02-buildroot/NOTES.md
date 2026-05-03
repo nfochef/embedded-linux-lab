@@ -267,6 +267,7 @@ Markerar hello med space och missade steget att bygga om imagen med make 2>1 | t
 Min första paket integration som ett Buildroot recept! resultatet blir då en distro där hello är förinstallerad och redo att köras. KUL!
 
 
+Vad är skillnaden mellan att kompilera en binär själv och att paketera den som ett Buildroot-recept?
 
 
 
