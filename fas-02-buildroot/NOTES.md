@@ -273,5 +273,6 @@ För statiska filer är package recipe overkill. Buildroot har en enklare mekani
 En **overlay** är en mapp i ditt projekt som speglar root-filsystemets struktur. Vid bygget kopieras allt från overlayen rakt in i imagen.<br>
 
 Så hur ska man veta när man ska använda overlay el package?
-
+Overlay: statiska filer som är samma varje gång, knutna till imagen (motd, version-info, default-konfig)
+Package: binärer du bygger från källkod, eller paket som behöver dependency-hantering
 
