@@ -267,7 +267,11 @@ Markerar hello med space och missade steget att bygga om imagen med make 2>1 | t
 Min första paket integration som ett Buildroot recept! resultatet blir då en distro där hello är förinstallerad och redo att köras. KUL!
 
 
-Vad är skillnaden mellan att kompilera en binär själv och att paketera den som ett Buildroot-recept?
+# Overlay filesystems
+Tanken är att lägga till tre egna filer (motd, sysinfo-script, README) i imagen via en rootfs overlay. Bygga om, boota och se dem på plats.<br>
+För statiska filer är package recipe overkill. Buildroot har en enklare mekanism: rootfs overlay.<br>
+En **overlay** är en mapp i ditt projekt som speglar root-filsystemets struktur. Vid bygget kopieras allt från overlayen rakt in i imagen.<br>
 
+Så hur ska man veta när man ska använda overlay el package?
 
 
