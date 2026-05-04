@@ -276,3 +276,22 @@ Så hur ska man veta när man ska använda overlay el package?
 Overlay: statiska filer som är samma varje gång, knutna till imagen (motd, version-info, default-konfig)
 Package: binärer du bygger från källkod, eller paket som behöver dependency-hantering
 
+Första tanken är att lägga in ett motd precis så som wsl ubuntu har när jag startar det. jag vill att det ska visas på mitt OP. 
+
+Script som rapporterar sys info :<br>
+cat > ~/ws/embedded-linux-lab/fas-02-buildroot/rootfs-overlay/usr/local/bin/sysinfo.sh << 'EOF'<br>
+#!/bin/sh<br>
+echo "=== System Info ==="<br>
+echo "Hostname:     $(hostname)"<br>
+echo "Kernel:       $(uname -r)"<br>
+echo "Architecture: $(uname -m)"<br>
+echo "Uptime:       $(uptime)"<br>
+echo ""<br>
+echo "Memory:"<br>
+free -h | head -2<br>
+echo ""<br>
+echo "Disk:"<br>
+df -h / | head -2<br>
+EOF<br>
+
+chmod +x ~/ws/embedded-linux-lab/fas-02-buildroot/rootfs-overlay/usr/local/bin/sysinfo.sh<br>
