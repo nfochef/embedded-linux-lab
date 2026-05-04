@@ -273,8 +273,8 @@ För statiska filer är package recipe overkill. Buildroot har en enklare mekani
 En **overlay** är en mapp i ditt projekt som speglar root-filsystemets struktur. Vid bygget kopieras allt från overlayen rakt in i imagen.<br>
 
 Så hur ska man veta när man ska använda overlay el package?
-Overlay: statiska filer som är samma varje gång, knutna till imagen (motd, version-info, default-konfig)
-Package: binärer du bygger från källkod, eller paket som behöver dependency-hantering
+**Overlay** är perfekt för små, oföränderliga filer som inte kräver några beroenden eller kompileringssteg.
+**Package recipes** är bäst när man jobbar med binärer som behöver byggas om, eller när man har mer komplexa behov som involverar beroenden eller dynamiska program.
 
 Första tanken är att lägga in ett motd precis så som wsl ubuntu har när jag startar det. jag vill att det ska visas på mitt OP. 
 
@@ -295,3 +295,5 @@ df -h / | head -2<br>
 EOF<br>
 
 chmod +x ~/ws/embedded-linux-lab/fas-02-buildroot/rootfs-overlay/usr/local/bin/sysinfo.sh<br>
+
+
