@@ -296,8 +296,8 @@ EOF<br>
 
 chmod +x ~/ws/embedded-linux-lab/fas-02-buildroot/rootfs-overlay/usr/local/bin/sysinfo.sh<br>
 
-Jag har stött på en del PATH relaterade errors. 
-PATH-mental modell: PATH är en lista av kataloger som shellen söker igenom när ett kommando skrivs in. Första matchen vinner. Om en binär finns men inte hittas, kontrollera om dess katalog är i PATH.<br>
+Jag har stött på en del PATH relaterade errors under bygget:<br>
+PATH är en lista av kataloger som shellen söker igenom när ett kommando skrivs in. Första matchen vinner. Om en binär finns men inte hittas, kontrollera om dess katalog är i PATH.<br>
 echo $PATH är diagnoskommandot.<br>
 
 Buildroot-default har minimal target-PATH (/bin:/sbin:/usr/bin:/usr/sbin). /usr/local/bin är inte med. Workaround: /etc/profile.d/*.sh-fil som exporterar utökad PATH, levererad via overlay.<br>
