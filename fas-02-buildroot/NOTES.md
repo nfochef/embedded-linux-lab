@@ -303,4 +303,5 @@ echo $PATH är diagnoskommandot.<br>
 Buildroot-default har minimal target-PATH (/bin:/sbin:/usr/bin:/usr/sbin). /usr/local/bin är inte med. Workaround: /etc/profile.d/*.sh-fil som exporterar utökad PATH, levererad via overlay.<br>
 PATH-buggar är vanligt i scripts, cron, CI, container-images. echo $PATH är värt att ha med sig samt minnas konventionerna. 
 
+# Init-scripts och autostart
 
