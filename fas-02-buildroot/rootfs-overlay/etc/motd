@@ -1,0 +1,7 @@
+
+  Welcome to qemu-lab, A Buildroot learning image
+  Built with Buildroot 2026.02.1, kernel 6.18.7
+  Custom package: hello (in /usr/bin/hello)
+  Jns - Embedded developer
+  Repo: https://github.com/nfochef/embedded-linux-lab
+
