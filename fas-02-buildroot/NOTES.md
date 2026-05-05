@@ -272,11 +272,8 @@ Tanken är att lägga till tre egna filer (motd, sysinfo-script, README) i image
 För statiska filer är package recipe overkill. Buildroot har en enklare mekanism: rootfs overlay.<br>
 En **overlay** är en mapp i ditt projekt som speglar root-filsystemets struktur. Vid bygget kopieras allt från overlayen rakt in i imagen.<br>
 
-Så hur ska man veta när man ska använda overlay el package?
-**Overlay** är perfekt för små, oföränderliga filer som inte kräver några beroenden eller kompileringssteg.
-**Package recipes** är bäst när man jobbar med binärer som behöver byggas om, eller när man har mer komplexa behov som involverar beroenden eller dynamiska program.
-
-Första tanken är att lägga in ett motd precis så som wsl ubuntu har när jag startar det. jag vill att det ska visas på mitt OP. 
+**Overlay** passar när man bara vill lägga in enkla filer rakt in i rootfs, till exempel ett litet script eller en statisk konfigurationsfil som inte har några beroenden och inte behöver byggas.<br> 
+Ett **package** är däremot mer lämpligt när innehållet kräver någon form av hantering: om det ska kompileras, har beroenden till andra komponenter, behöver versionsstyras eller uppdateras på ett mer kontrollerat sätt.<br>
 
 Script som rapporterar sys info :<br>
 cat > ~/ws/embedded-linux-lab/fas-02-buildroot/rootfs-overlay/usr/local/bin/sysinfo.sh << 'EOF'<br>
