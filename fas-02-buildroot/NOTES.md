@@ -302,3 +302,9 @@ PATH-buggar 채r vanligt i scripts, cron, CI, container-images. echo $PATH 채r v�
 
 # Init-scripts och autostart
 
+Tre stora init-system existerar:
+systemd modern, dominerande p책 desktop/server
+SysV-init, klassisk, fortfarande standard p책 **BusyBox**
+OpenRC,  minimalistisk, popul채r p책 **Alpine och Gentoo**
+
+
