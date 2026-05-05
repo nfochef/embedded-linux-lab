@@ -307,4 +307,13 @@ systemd modern, dominerande på desktop/server
 SysV-init, klassisk, fortfarande standard på **BusyBox**
 OpenRC,  minimalistisk, populär på **Alpine och Gentoo**
 
+Numreringen styr ordningen: S01logging --> S02network --> S99myapp. Tjänster som behöver nätverk har högre nummer än nätverkstjänsten själv.<br>
+Så S = "Start" (vid shutdown körs K-prefixade scripts "Kill")<br>
+99 = ordningsnummer (00-99) - Kan det vara högre än 99?<br>
+myapp = Beskrivningsnamn<br>
+Init-systemet bryr sig bara om de två första delarna<br>
+Icke kritiska högre nummer , det verkar finnas en konventation för detta som är: <br>
+S00-S30 - systemets egna tjänster (filsystem, nätverk, syslog)<br>
+S30-S70 - paketerade applikationer (Buildroot/Yocto-paket)<br>
+S80-S99 - egna applikationer, custom-tjänster (icke kritiska)<br>
 
