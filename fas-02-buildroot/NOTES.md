@@ -317,5 +317,5 @@ S00-S30 - systemets egna tjänster (filsystem, nätverk, syslog)<br>
 S30-S70 - paketerade applikationer (Buildroot/Yocto-paket)<br>
 S80-S99 - egna applikationer, custom-tjänster (icke kritiska)<br>
 
-Vissa av dessa kräver beroenden från andra tjänster har startat först.<br>
-
+Vissa av dessa kräver beroenden från andra tjänster som har startat först, för att kunna köras.<br>
+vid felsökning läs boot-loggen och kolla extra på ordningen tjänsterna startade i.<br>
