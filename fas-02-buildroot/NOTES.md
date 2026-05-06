@@ -320,9 +320,9 @@ S80-S99 - egna applikationer, custom-tjänster (icke kritiska)<br>
 Vissa av dessa kräver beroenden från andra tjänster som har startat först, för att kunna köras.<br>
 vid felsökning läs boot-loggen och kolla extra på ordningen tjänsterna startade i.<br>
 
-Init script i overlay:
-NAME=hello
-DAEMON=/usr/bin/hello
-LOGFILE=/var/log/hello.log
+Init script i overlay:<br>
+NAME=hello<br>
+DAEMON=/usr/bin/hello<br>
+LOGFILE=/var/log/hello.log<br>
 
 
