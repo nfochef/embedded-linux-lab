@@ -1,3 +1,4 @@
+<img width="241" height="38" alt="Skärmbild 2026-05-08 082039" src="https://github.com/user-attachments/assets/bedb5ed6-0880-4ef3-ace3-9bced0f8d617" />
 # Fas 2 Buildroot
 Källkod , konfiguration in , image ut.
 Reproducerbarhet är minst lika viktigt som minimalism som den erhåller, produkten ska kunna byggas om identiskt om ~10 år.<br>
@@ -366,3 +367,6 @@ exit 0<br>
 EOF<br>
 
 chmod +x ~/ws/embedded-linux-lab/fas-02-buildroot/rootfs-overlay/etc/init.d/S99hello<br>
+
+<img width="241" height="38" alt="Skärmbild 2026-05-08 082039" src="https://github.com/user-attachments/assets/6cde7363-e7f5-463d-96a6-64b6afe0a379" /><br>
+
