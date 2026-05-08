@@ -368,7 +368,8 @@ EOF<br>
 
 chmod +x ~/ws/embedded-linux-lab/fas-02-buildroot/rootfs-overlay/etc/init.d/S99hello<br>
 
-<img width="283" height="204" alt="Skärmbild 2026-05-08 101125" src="https://github.com/user-attachments/assets/99f12241-a651-4bec-a8ee-79a32ced3328" /><br>
+<img width="410" height="331" alt="Skärmbild 2026-05-08 101305" src="https://github.com/user-attachments/assets/f7e18e12-8031-4089-a704-ab7299ecc8a3" /><br>
+
 
 
 
