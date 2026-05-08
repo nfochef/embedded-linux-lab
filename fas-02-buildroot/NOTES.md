@@ -321,8 +321,48 @@ Vissa av dessa kräver beroenden från andra tjänster som har startat först, f
 vid felsökning läs boot-loggen och kolla extra på ordningen tjänsterna startade i.<br>
 
 Init script i overlay:<br>
+#!/bin/sh<br>
+#<br>
+# S99hello runs the hello binary at boot, logs output to /var/log/hello.log<br>
+#<br>
 NAME=hello<br>
 DAEMON=/usr/bin/hello<br>
 LOGFILE=/var/log/hello.log<br>
+
+start() {<br>
+    printf "Starting %s: " "$NAME"<br>
+    mkdir -p /var/log<br>
+    {<br>
+        echo "=== $(date) — boot ==="<br>
+        $DAEMON<br>
+        echo ""<br>
+    } >> $LOGFILE 2>&1<br>
+    echo "OK"<br>
+}<br>
+
+stop() {<br>
+    printf "Stopping %s: " "$NAME"<br>
+    echo "OK"<br>
+}<br>
+
+case "$1" in<br>
+    start)<br>
+        start<br>
+        ;;<br>
+    stop)<br>
+        stop<br>
+        ;;<br>
+    restart|reload)<br>
+        stop<br>
+        start<br>
+        ;;<br>
+    *)<br>
+        echo "Usage: $0 {start|stop|restart}"<br>
+        exit 1<br>
+        ;;<br>
+esac<br>
+
+exit 0<br>
+EOF<br>
 
 
