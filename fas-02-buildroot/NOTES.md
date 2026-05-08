@@ -323,7 +323,7 @@ vid felsökning läs boot-loggen och kolla extra på ordningen tjänsterna start
 Init script i overlay:<br>
 #!/bin/sh<br>
 #<br>
-# S99hello runs the hello binary at boot, logs output to /var/log/hello.log<br>
+S99hello runs the hello binary at boot, logs output to /var/log/hello.log<br>
 #<br>
 NAME=hello<br>
 DAEMON=/usr/bin/hello<br>
