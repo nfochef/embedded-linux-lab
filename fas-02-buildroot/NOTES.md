@@ -365,4 +365,4 @@ esac<br>
 exit 0<br>
 EOF<br>
 
-
+chmod +x ~/ws/embedded-linux-lab/fas-02-buildroot/rootfs-overlay/etc/init.d/S99hello<br>
