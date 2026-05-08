@@ -333,7 +333,7 @@ start() {<br>
     printf "Starting %s: " "$NAME"<br>
     mkdir -p /var/log<br>
     {<br>
-        echo "=== $(date) — boot ==="<br>
+        echo "$(date) booted "<br>
         $DAEMON<br>
         echo ""<br>
     } >> $LOGFILE 2>&1<br>
