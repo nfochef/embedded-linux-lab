@@ -373,5 +373,10 @@ chmod +x ~/ws/embedded-linux-lab/fas-02-buildroot/rootfs-overlay/etc/init.d/S99h
 #### Problem , när jag kör systemet två gånger så registreras inte det i loggen.
 #### Buildroot har Buildroot-default att spara skrivningar mot SD-kort (förlänger livslängd)
 #### Embedded-enheter förväntas inte ha persistent state mellan boots
+Hur undgår man detta?
+1.Mounta en persistent partition på /var/log/
+2.Skicka loggar till annan host via syslog.
+3.Använder journald med persistent storage.
+4.Skriv kritiska loggar till en separat overlay som överlever reboots.
 
 
