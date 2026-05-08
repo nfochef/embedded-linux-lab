@@ -379,4 +379,5 @@ Hur undgår man detta?
  - Använder journald med persistent storage.<br>
  - Skriv kritiska loggar till en separat overlay som överlever reboots.<br>
 
+Reflektion: jag har nu byggt en image som bootar, autostartar min egen "app", loggar och kan stängas ned korrekt.
 
