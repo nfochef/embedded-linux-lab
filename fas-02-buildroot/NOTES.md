@@ -374,9 +374,9 @@ chmod +x ~/ws/embedded-linux-lab/fas-02-buildroot/rootfs-overlay/etc/init.d/S99h
 #### Buildroot har Buildroot-default att spara skrivningar mot SD-kort (förlänger livslängd)
 #### Embedded-enheter förväntas inte ha persistent state mellan boots.
 Hur undgår man detta?
-1.Mounta en persistent partition på /var/log/<br>
-2.Skicka loggar till annan host via syslog.<br>
-3.Använder journald med persistent storage.<br>
-4.Skriv kritiska loggar till en separat overlay som överlever reboots.<br>
+ - Mounta en persistent partition på /var/log/<br>
+ - Skicka loggar till annan host via syslog.<br>
+ - Använder journald med persistent storage.<br>
+ - Skriv kritiska loggar till en separat overlay som överlever reboots.<br>
 
 
