@@ -370,6 +370,8 @@ chmod +x ~/ws/embedded-linux-lab/fas-02-buildroot/rootfs-overlay/etc/init.d/S99h
 
 <img width="410" height="331" alt="Skärmbild 2026-05-08 101305" src="https://github.com/user-attachments/assets/f7e18e12-8031-4089-a704-ab7299ecc8a3" /><br>
 
-
+### Problem , när jag kör systemet två gånger så registreras inte det i loggen. <br>
+### Buildroot har Buildroot-default att spara skrivningar mot SD-kort (förlänger livslängd)<br>
+### Embedded-enheter förväntas inte ha persistent state mellan boots<br>
 
 
