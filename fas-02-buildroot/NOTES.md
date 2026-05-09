@@ -321,6 +321,8 @@ S80-S99 - egna applikationer, custom-tjänster (icke kritiska)<br>
 Vissa av dessa kräver beroenden från andra tjänster som har startat först, för att kunna köras.<br>
 vid felsökning läs boot-loggen och kolla extra på ordningen tjänsterna startade i.<br>
 
+Man gör SXX numreringar i init systemen för hur dependencies styr ordning. Mental modell...<br>
+
 Init script i overlay:<br>
 #!/bin/sh<br>
 #<br>
@@ -381,7 +383,7 @@ Hur undgår man detta?
 
 Reflektion: jag har nu byggt en image som bootar, autostartar min egen "app", loggar och kan stängas ned korrekt.<br>
 
-
+Man gör SXX numreringar i init systemen för hur dependencies styr ordning. Mental modell...<br>
 
 
 
