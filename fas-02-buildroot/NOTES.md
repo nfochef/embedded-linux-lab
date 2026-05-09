@@ -386,5 +386,7 @@ Reflektion: jag har nu byggt en image som bootar, autostartar min egen "app", lo
 Man gör SXX numreringar i init systemen för hur dependencies styr ordning. Mental modell...<br>
 
 
+# Felsökning och introspektion
+
 
 
