@@ -387,5 +387,6 @@ Man gör SXX numreringar i init systemen för hur dependencies styr ordning. Men
 
 # Felsökning och introspektion
 
+Relektera över vad som egentligen finns i imagen. Utforska alla paket som är i imagen
 
 
