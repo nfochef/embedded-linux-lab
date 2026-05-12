@@ -394,5 +394,10 @@ cd ~/ws/buildroot<br>
 make show-info | head -30<br>
 Detta ger mig vad som ser ut att vara ett ernormt JSON svar.<br>
 <img width="904" height="422" alt="Skärmbild 2026-05-12 191815" src="https://github.com/user-attachments/assets/b5d31b4f-cdfe-4acb-b545-4ecce9f0f18b" /><br>
+inspektion av varje paket i imagen med exakta metadata: version, licens, källa, patches, dependencies.<br>
+ake legal-info (licensrapport), och make <paket>-show-info (per-paket-info). Detta känns som ett mindre måste om man behöver kunna redovisa licenser och beroenden i projekt.<br>
+
+
+
 
 
