@@ -389,4 +389,7 @@ Man gör SXX numreringar i init systemen för hur dependencies styr ordning. Men
 
 Relektera över vad som egentligen finns i imagen. Utforska alla paket som är i imagen
 tänka på hur jag kan itirera utan att bygga om imagen när jag vill jobba med custom recipe
+vad finns i imagen: <br>
+cd ~/ws/buildroot<br>
+make show-info | head -30<br>
 
