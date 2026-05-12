@@ -392,7 +392,7 @@ tänka på hur jag kan itirera utan att bygga om imagen när jag vill jobba med 
 vad finns i imagen: <br>
 cd ~/ws/buildroot<br>
 make show-info | head -30<br>
-Detta ger mig vad som ser ut att vara ett ernormt JSON svar.
-<img width="904" height="422" alt="Skärmbild 2026-05-12 191815" src="https://github.com/user-attachments/assets/b5d31b4f-cdfe-4acb-b545-4ecce9f0f18b" />
+Detta ger mig vad som ser ut att vara ett ernormt JSON svar.<br>
+<img width="904" height="422" alt="Skärmbild 2026-05-12 191815" src="https://github.com/user-attachments/assets/b5d31b4f-cdfe-4acb-b545-4ecce9f0f18b" /><br>
 
 
