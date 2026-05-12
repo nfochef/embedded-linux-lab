@@ -398,6 +398,9 @@ inspektion av varje paket i imagen med exakta metadata: version, licens, källa,
 ake legal-info (licensrapport), och make <paket>-show-info (per-paket-info). Detta känns som ett mindre måste om man behöver kunna redovisa licenser och beroenden i projekt.<br>
 
 
-
+Det man behövde för att kunna få ut var hela licens rapporten ligger så är kommandot:<br>
+make legal-info 2>&1 | tail -10<br>
+ls output/legal-info/<br>
+head -20 output/legal-info/manifest.csv<br>
 
 
