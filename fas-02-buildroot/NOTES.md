@@ -429,8 +429,8 @@ När jag behöver ändra något i **Source-trädet** så behöver Buildroot trig
 Om jag är osäker på förändringen i source el recept fil:erna och vill undvika mystiska cache fel så vinner jag på att använda mig av kommandot : **<paket>-dirclean**<br>
 **Förenkald bild:**<br>
 **Buildroot per-paket cache-hantering:**<br>
-  **<paket>-rebuild   — mjuk, source-ändring räcker**<br>
-  **<paket>-dirclean  — hård, raderar build-katalog**<br>
+  **<paket>-rebuild -  mjuk, source-ändring räcker**<br>
+  **<paket>-dirclean - hård, raderar build-katalog**<br>
   
   **Recipe-ändring (.mk-fil) eller nya filer → dirclean**<br>
   **Bara kod-ändring                          → rebuild**<br>
