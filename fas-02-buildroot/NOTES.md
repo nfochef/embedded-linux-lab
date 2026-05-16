@@ -426,7 +426,7 @@ Detta är samma precis cache-fenomen som i Docker<br>
 
 När jag behöver ändra något i **Source-trädet** så behöver Buildroot triggas att synca det till **bygg-trädet.** Ett lyckat bygge syncar från **Bygg-trädet** till **Target-trädet.**<br>
 **Fel ordning och man får man massa fel**
-Om jag är osäker på förändringen i source el recept fil:erna och vill undvika mystiska cache fel så vinner jag på att använda mig av kommandot : **<paket>-dirclean**
+Om jag är osäker på förändringen i source el recept fil:erna och vill undvika mystiska cache fel så vinner jag på att använda mig av kommandot : **<paket>-dirclean**<br>
 **Förenkald bild:**<br>
 **Buildroot per-paket cache-hantering:**<br>
   **<paket>-rebuild   — mjuk, source-ändring räcker**<br>
