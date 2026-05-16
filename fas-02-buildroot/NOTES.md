@@ -424,3 +424,5 @@ Detta är samma precis cache-fenomen som i Docker<br>
 **Bygg-träd**, där Buildroot kompilerar (output/build/hello-1.0/)<br>
 **Target-träd**, där den installerade artefakten hamnar (output/target/usr/bin/)<br>
 
+När jag behöver ändra något i **Source-trädet** så behöver Buildroot triggas att synca det till **bygg-trädet.** Ett lyckat bygge syncar från **Bygg-trädet** till **Target-trädet.**<br>
+**Fel ordning och man får man massa fel**
