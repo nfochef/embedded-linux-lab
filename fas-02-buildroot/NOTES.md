@@ -435,3 +435,18 @@ Om jag är osäker på förändringen i source el recept fil:erna och vill undvi
   **Recipe-ändring (.mk-fil) eller nya filer → dirclean**<br>
   **Bara kod-ändring                          → rebuild**<br>
 
+  För  varje paket genererar Buildroot en rad uppsättning med targets, ett mönster som är värt att kunna för daglig hantering:<br>
+make <paket>-source          bara ladda ner källkod<br>
+make <paket>-extract         extrahera tarball + applicera patches<br>
+make <paket>-configure       kör configure-steget<br>
+make <paket>-build           bygg (inte install)<br>
+make <paket>-install         installera till target<br>
+make <paket>-rebuild         mjuk omstart<br>
+make <paket>-reconfigure     kör om configure + bygg + install<br>
+make <paket>-dirclean        hård omstart<br>
+make <paket>-show-info       visa metadata<br>
+make <paket>-show-depends    visa beroenden<br>
+make <paket>-show-rdepends   visa vad som beror på paketet<br>
+
+
+
