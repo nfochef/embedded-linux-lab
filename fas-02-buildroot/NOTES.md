@@ -403,4 +403,21 @@ make legal-info 2>&1 | tail -10<br>
 ls output/legal-info/<br>
 head -20 output/legal-info/manifest.csv<br>
 
+Skapade en MIT-licens<br>
+Jag missade att deklarera MIT-licensen i hello.mk Att lägga en fil i "package/hello/src/" räcker inte för Buildroot.<br>
+Paketet måste veta om filen via en variabel i .mk-filen i detta fall<br>
+"HELLO_LICENSE_FILES = LICENSE" Filer existerar inte för byggsystemet förrän de är deklarerade.<br>
+
+**Buildroots cache är aggressiv**<br>
+Source-katalogen "package/<X>/src/" och byggkatalogen<br>
+"output/build/<X>/" är två separata platser. Ändringar i source kopieras
+inte automatiskt till build.<br>
+Löste med "make <paket>-dirclean" raderar<br>
+Byggkatalogen och tvingar omstart från source. "make <paket>-rebuild" är
+mjukare. <br>
+Detta är samma precis cache-fenomen som i Docker<br>
+
+**Mental Note:** Läs felmeddelandena lite extra noga.<br>
+
+
 
