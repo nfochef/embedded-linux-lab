@@ -419,5 +419,8 @@ Detta är samma precis cache-fenomen som i Docker<br>
 
 **Mental Note:** Läs felmeddelandena lite extra noga.<br>
 
-
+##### För varje paket i Buildroot finns tre platser där "filen finns":
+**Source-träd**, där du editerar (package/hello/src/)<br>
+**Bygg-träd**, där Buildroot kompilerar (output/build/hello-1.0/)<br>
+**Target-träd**, där den installerade artefakten hamnar (output/target/usr/bin/)<br>
 
