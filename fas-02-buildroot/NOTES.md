@@ -450,6 +450,7 @@ make <paket>-show-rdepends   visa vad som beror på paketet<br>
 
 <img width="609" height="83" alt="Skärmbild 2026-05-17 161555" src="https://github.com/user-attachments/assets/58bdd8b5-4ae0-436c-a811-018cbdd48757" /><br>
 
+Buildroot pekar nu bekräftat på LICENSE-filen i paketet , det lyckades!
 
 
 
