@@ -407,7 +407,7 @@ Skapade en MIT-licens<br>
 Jag missade att deklarera MIT-licensen i hello.mk Att lägga en fil i "package/hello/src/" räcker inte för Buildroot.<br>
 Paketet måste veta om filen via en variabel i .mk-filen i detta fall<br>
 "HELLO_LICENSE_FILES = LICENSE" Filer existerar inte för byggsystemet förrän de är deklarerade.<br>
-
+---
 **Buildroots cache är aggressiv**<br>
 Source-katalogen "package/<X>/src/" och byggkatalogen<br>
 "output/build/<X>/" är två separata platser. Ändringar i source kopieras
@@ -451,7 +451,7 @@ make <paket>-show-rdepends   visa vad som beror på paketet<br>
 <img width="609" height="83" alt="Skärmbild 2026-05-17 161555" src="https://github.com/user-attachments/assets/58bdd8b5-4ae0-436c-a811-018cbdd48757" /><br>
 
 Buildroot pekar nu bekräftat på LICENSE-filen i paketet , det lyckades!
-
+---
 jag kör :
 echo "// debug comment $(date)" >> ~/ws/buildroot/package/hello/src/hello.c<br>
 make hello-rebuild 2>&1 | tail -10<br>
