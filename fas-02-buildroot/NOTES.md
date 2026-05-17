@@ -1,5 +1,3 @@
-<img width="609" height="83" alt="Skärmbild 2026-05-17 161555" src="https://github.com/user-attachments/assets/87c67fae-cfa4-452a-9d13-d9cb0e40bd6f" />
-<img width="609" height="83" alt="Skärmbild 2026-05-17 161555" src="https://github.com/user-attachments/assets/1e722578-de65-47d8-8b97-24dd70432d14" />
 # Fas 2 Buildroot
 Källkod , konfiguration in , image ut.
 Reproducerbarhet är minst lika viktigt som minimalism som den erhåller, produkten ska kunna byggas om identiskt om ~10 år.<br>
