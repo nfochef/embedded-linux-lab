@@ -452,10 +452,12 @@ make <paket>-show-rdepends   visa vad som beror på paketet<br>
 
 Buildroot pekar nu bekräftat på LICENSE-filen i paketet , det lyckades!
 
-jag kör : echo "// debug comment $(date)" >> ~/ws/buildroot/package/hello/src/hello.c<br>
+jag kör :
+echo "// debug comment $(date)" >> ~/ws/buildroot/package/hello/src/hello.c<br>
 make hello-rebuild 2>&1 | tail -10<br>
 ls -la output/target/usr/bin/hello<br>
 vad jag får och , vad betyder detta??<br>
+
 <img width="2469" height="721" alt="Skärmbild 2026-05-17 163547" src="https://github.com/user-attachments/assets/846bcd9e-6c9c-4155-995b-afc772f3e7f4" /><br>
 
 
