@@ -462,6 +462,10 @@ vad jag får och , vad betyder detta??<br>
 
 <img width="2469" height="721" alt="Skärmbild 2026-05-17 163547" src="https://github.com/user-attachments/assets/846bcd9e-6c9c-4155-995b-afc772f3e7f4" /><br>
 
+Tre interna Buildroot-targets:<br>
 
+ - host-skeleton - minimal user/group-databas för host-byggmiljön<br>
+ - skeleton - minimal /etc/passwd, /etc/group osv för target<br>
+ - toolchain - cross-compilern + libc<br>
 
 
