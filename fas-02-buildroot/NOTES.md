@@ -506,11 +506,11 @@ cd ~/ws/buildroot<br>
 make graph-size 2>&1 | tail -10<br>
 ls output/graphs/<br>
 <img width="446" height="203" alt="Skärmbild 2026-05-19 094143" src="https://github.com/user-attachments/assets/c5877c4c-81ec-4f66-bce8-8baa20ba1df1" /><br>
----
-<img width="647" height="528" alt="Skärmbild 2026-05-19 095822" src="https://github.com/user-attachments/assets/fff29c88-cd29-4db3-a097-2a1d4f16cfec" />>br>
 
 ^^ Dessa filer finns i imagen men Buildroot vet inte vilket bibliotek de tillhör. Paket-recipes spårar varje fil Overlay filer flyger under radarn, Buildroot vet om att det finns men inte vet vart de "hör"<br>
 man bör minska dessa varningar i produktion. Ett sätt att göra det på, är att paketera om det är applikationsfiler eller aceptera dem som boilerplate om de är konfiguration.<br>
+---
+<img width="647" height="528" alt="Skärmbild 2026-05-19 095822" src="https://github.com/user-attachments/assets/fff29c88-cd29-4db3-a097-2a1d4f16cfec" /<br>
 
 ### Rådatan:<br>
 <img width="399" height="242" alt="Skärmbild 2026-05-19 100107" src="https://github.com/user-attachments/assets/349a1289-611c-4ab0-9097-87ea0946c880" /><br>
