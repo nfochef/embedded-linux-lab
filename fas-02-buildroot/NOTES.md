@@ -540,6 +540,12 @@ I produktion:<br>
 
 ### Börjar förstå att embedded-team byter glibc mot musl när varje MB räknas. vilket verkar vara det enda sättet att märkbart krympa imagen.<br>
 
+För optimering av imagen<br>
+ - Byta ut glibc till muls libc.<br>
+ - Ta bort onödiga paket
+ - Bygg utan libm om applicationen inte använder matematik
+ - Strippa fler symols ur binärer.<br>
+ 
 
 
 
