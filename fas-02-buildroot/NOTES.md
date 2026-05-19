@@ -472,10 +472,24 @@ Per-paket-targets ger granular kontroll! jag kan visa metadata (show-info), insp
 - make myapp-rebuild är ofta förekommande i utvecklingen.<br>
 
 # Image-storlek och optimering
----
- ### Hitta fel i imagern och hur man kan se det. 
+### Hitta fel i imagern och hur man kan se det. 
 
+Jag börjar med storleken , jag tar en koll på hur stor min image är.<br>
 
+<img width="319" height="60" alt="Skärmbild 2026-05-19 091036" src="https://github.com/user-attachments/assets/f161038d-c4cb-4e49-bd4b-7f34b58c45ea" /><br>
+
+jag noterar även värdefula kommandon för storlek:<br>
+ - du <fil>           # storlek på filen<br>
+ - du -h <fil>        # human-readable (KB, MB, GB istället för bytes)<br>
+ - du -s <katalog>    # summary — bara totalen, inte varje underfil<br>
+ - du -sh <katalog>   # kombinationen — totalt + läsbart<br>
+ 
+Något intressant dök upp i denna körning. efter googlande så lär jag mig något nytt som att Linux har en finess som heter SPARSE files<br>
+En sparse file är en fil som luras med storleken för att spara diskutrymme. (datorn slipper skriva ut massa nollor)<br>
+
+ - Apparent size (ls -lh) - vad filen säger sig vara<br>
+ - Allocated size (du -sh) - vad den faktiskt tar på host-disk<br>
+ 
 
 
 
