@@ -471,8 +471,9 @@ Tre interna Buildroot-targets:<br>
 Per-paket-targets ger granular kontroll! jag kan visa metadata (show-info), inspektera beroenden (show-depends, show-rdepends), och iterera snabbt (rebuild) utan att bygga om hela imagen.<br>
 - make myapp-rebuild är ofta förekommande i utvecklingen.<br>
 
-
-
+# Image-storlek och optimering
+---
+ ### Hitta fel i imagern och hur man kan se det. 
 
 
 
