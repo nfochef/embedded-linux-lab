@@ -505,6 +505,9 @@ jag körde:<br>
 cd ~/ws/buildroot<br>
 make graph-size 2>&1 | tail -10<br>
 ls output/graphs/<br>
+
+(sudo apt install -y python3-matplotlib)<br>
+
 <img width="446" height="203" alt="Skärmbild 2026-05-19 094143" src="https://github.com/user-attachments/assets/c5877c4c-81ec-4f66-bce8-8baa20ba1df1" /><br>
 
 Dessa filer finns i imagen men Buildroot vet inte vilket bibliotek de tillhör. Paket-recipes spårar varje fil Overlay filer flyger under radarn, Buildroot vet om att det finns men inte vet vart de "hör"<br>
