@@ -547,7 +547,7 @@ För optimering av imagen<br>
  - Strippa fler symols ur binärer.<br>
  
 
-
+# Persistent logging
 
 
 
