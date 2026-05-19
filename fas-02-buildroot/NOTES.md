@@ -490,7 +490,7 @@ En sparse file är en fil som luras med storleken för att spara diskutrymme. (d
  - Apparent size (ls -lh) - vad filen säger sig vara<br>
  - Allocated size (du -sh) - vad den faktiskt tar på host-disk<br>
  
-
+ ### Mental bild: Ett system är en kombination av statiska filer på disk och dynamiskt innehåll i RAM
 
 
 
