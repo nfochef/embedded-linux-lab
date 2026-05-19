@@ -550,9 +550,10 @@ För optimering av imagen<br>
  - Strippa fler symols ur binärer.<br>
  
 
-# Persistent logging
+# Persistent logging<br>
 
-
+Tidigare upptäckte jag att /var/log/hello.log försvann vid reboot. Anledningen: är att /var är monterad som tmpfs (RAM-disk) by default på Buildroot.<br>
+Det är medvetet design för embedded då det sparar SD-kortets livslängd genom att inte skriva ständigt till flash. Men för loggar som ska överleva reboot är det fel.<br>
 
 
 
