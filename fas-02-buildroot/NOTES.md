@@ -490,9 +490,15 @@ En sparse file är en fil som luras med storleken för att spara diskutrymme. (d
  - Apparent size (ls -lh) - vad filen säger sig vara<br>
  - Allocated size (du -sh) - vad den faktiskt tar på host-disk<br>
  
- ### Mental bild: Ett system är en kombination av statiska filer på disk och dynamiskt innehåll i RAM
+ ### Mental bild: Ett system är en kombination av statiska filer på disk och dynamiskt innehåll i RAM<br>
 
+Bekräftat: /usr/bin/which → ../../bin/busybox (17 bytes symlink)<br>
+Hela BusyBox-modellen i en rad data: 17 bytes pekar på 840 KB<br>
+binär som beter sig som 150+ olika kommandon via argv[0].<br>
 
+Detta är den mest spektakulära storlek-optimeringen i embedded:<br>
+~150 separata GNU coreutils binärer (10-20 MB) reducerade till<br>
+1 binär + 150 symlinks (~840 KB + ~3 KB symlinks).<br>
 
 
 
