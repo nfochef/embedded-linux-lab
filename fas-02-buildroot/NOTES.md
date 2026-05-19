@@ -517,8 +517,28 @@ man bör minska dessa varningar i produktion. Ett sätt att göra det på, är a
 ### Rådatan:<br>
 <img width="399" height="242" alt="Skärmbild 2026-05-19 100107" src="https://github.com/user-attachments/assets/349a1289-611c-4ab0-9097-87ea0946c880" /><br>
 
+### Per fil storlek:
 
+<img width="685" height="313" alt="Skärmbild 2026-05-19 100659" src="https://github.com/user-attachments/assets/ce2e49e1-27fe-4b08-ace9-8f3c271b22db" /><br>
 
+Vad graph-size och overlay-detektering faktiskt har gett mig.<br>
+
+make graph-size genererar:<br>
+  - graph-size.pdf            cirkeldiagram per paket<br>
+  - package-size-stats.csv    rådata per paket<br>
+  - file-size-stats.csv       rådata per fil<br>
+
+WARNING-raderna är värdefulla: Buildroot rapporterar alla filer<br>
+som inte tillhör ett paket. Det är rena overlay-filer (motd, S99hello,<br>
+sysinfo.sh, README.txt, usrlocal.sh) eller systemgenererade<br>
+(hostname, issue, shells, os-release).<br>
+
+I produktion:<br>
+  - Applikationsfiler bör paketeras (eliminerar WARNING)<br>
+  - Statiska konfig-filer i overlay = accepterade WARNINGs<br>
+  - Generera-vid-bygge-filer (hostname etc) = accepterade WARNINGs<br>
+
+### Börjar förstå att embedded-team byter glibc mot musl när varje MB räknas. vilket verkar vara det enda sättet att märkbart krympa imagen.<br>
 
 
 
