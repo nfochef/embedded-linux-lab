@@ -567,35 +567,35 @@ Lösnignar på detta kan vara:
 
  Börjar med att skapa mig ett post-build-script<br>
 
- cat > ~/ws/embedded-linux-lab/fas-02-buildroot/scripts/post-build.sh << 'EOF'
-#!/bin/sh
-#
-# post-build.sh — runs after all packages installed but before image is created
-#
-# This script removes the /var/log symlink (which points to tmpfs /tmp) and
-# replaces it with a real directory on the persistent rootfs. This makes
-# log files survive reboots.
-#
-# Argument: $1 = TARGET_DIR (the path to the rootfs being built)
-#
+ cat > ~/ws/embedded-linux-lab/fas-02-buildroot/scripts/post-build.sh << 'EOF'<br>
+#!/bin/sh<br>
 
-TARGET_DIR="$1"
+# post-build.sh — runs after all packages installed but before image is created<br>
 
-if [ -z "$TARGET_DIR" ]; then
-    echo "ERROR: TARGET_DIR not provided"
-    exit 1
-fi
+ This script removes the /var/log symlink (which points to tmpfs /tmp) and<br>
+ replaces it with a real directory on the persistent rootfs. This makes<br>
+ log files survive reboots.
 
-# Remove symlink, create real directory
-if [ -L "$TARGET_DIR/var/log" ]; then
-    echo "post-build: removing /var/log symlink, creating real directory"
-    rm "$TARGET_DIR/var/log"
-    mkdir -p "$TARGET_DIR/var/log"
-    chmod 0755 "$TARGET_DIR/var/log"
-fi
+ Argument: $1 = TARGET_DIR (the path to the rootfs being built)<br>
 
-exit 0
-EOF
+
+TARGET_DIR="$1"<br>
+
+if [ -z "$TARGET_DIR" ]; then<br>
+    echo "ERROR: TARGET_DIR not provided"<br>
+    exit 1<br>
+fi<br>
+
+# Remove symlink, create real directory<br>
+if [ -L "$TARGET_DIR/var/log" ]; then<br>
+    echo "post-build: removing /var/log symlink, creating real directory"<br>
+    rm "$TARGET_DIR/var/log"<br>
+    mkdir -p "$TARGET_DIR/var/log"<br>
+    chmod 0755 "$TARGET_DIR/var/log"<br>
+fi<br>
+
+exit 0<br>
+EOF<br>
 
 
 
