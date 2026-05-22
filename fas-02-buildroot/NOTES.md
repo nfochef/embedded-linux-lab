@@ -568,26 +568,26 @@ Lösnignar på detta kan vara:
  Börjar med att skapa mig ett post-build-script<br>
 
  cat > ~/ws/embedded-linux-lab/fas-02-buildroot/scripts/post-build.sh << 'EOF'<br>
-#!/bin/sh<br>
+!/bin/sh<br>
 
-# post-build.sh — runs after all packages installed but before image is created<br>
+post-build.sh — runs after all packages installed but before image is created<br>
 
  This script removes the /var/log symlink (which points to tmpfs /tmp) and<br>
  replaces it with a real directory on the persistent rootfs. This makes<br>
  log files survive reboots.
 
- Argument: $1 = TARGET_DIR (the path to the rootfs being built)<br>
+ Argument: $1 = TARGET_DIR <br>
 
 
 TARGET_DIR="$1"<br>
 
-if [ -z "$TARGET_DIR" ]; then<br>
+if  -z "$TARGET_DIR" ]; then<br>
     echo "ERROR: TARGET_DIR not provided"<br>
     exit 1<br>
 fi<br>
 
-# Remove symlink, create real directory<br>
-if [ -L "$TARGET_DIR/var/log" ]; then<br>
+Remove symlink, create real directory<br>
+if -L "$TARGET_DIR/var/log" ]; then<br>
     echo "post-build: removing /var/log symlink, creating real directory"<br>
     rm "$TARGET_DIR/var/log"<br>
     mkdir -p "$TARGET_DIR/var/log"<br>
