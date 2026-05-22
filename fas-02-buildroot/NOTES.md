@@ -566,7 +566,7 @@ Lösnignar på detta kan vara:
  /var-strukturen, Sparar mountpunkter. En enda tmpfs återanvänds via fyra symlinks
 
  Börjar med att skapa mig ett post-build-script<br>
-
+---
  cat > ~/ws/embedded-linux-lab/fas-02-buildroot/scripts/post-build.sh << 'EOF'<br>
 !/bin/sh<br>
 
@@ -597,7 +597,7 @@ fi<br>
 exit 0<br>
 EOF<br>
 chmod +x ~/ws/embedded-linux-lab/fas-02-buildroot/scripts/post-build.sh<br>
-
+---
 Lägger till scriptet i Buildroot<br>
 cd ~/ws/buildroot
 make menuconfig
