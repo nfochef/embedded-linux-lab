@@ -596,7 +596,7 @@ fi<br>
 
 exit 0<br>
 EOF<br>
-
+chmod +x ~/ws/embedded-linux-lab/fas-02-buildroot/scripts/post-build.sh<br>
 
 
 
