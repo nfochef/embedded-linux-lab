@@ -613,7 +613,7 @@ BR2_ROOTFS_PRE_BUILD_SCRIPT     -körs FÖRE paket installeras<br>
 BR2_ROOTFS_POST_BUILD_SCRIPT    -körs EFTER paket installeras,<br>
                                    FÖRE image-fil skapas<br>
 
-Menutext är förvirrande:<br>
+**Menutext är förvirrande:**<br>
   "Custom scripts" (utan kvalifierare) = PRE<br>
   "Custom scripts to run before creating filesystem images" = POST<br>
   "Custom scripts to run after creating filesystem images" = POST_IMAGE<br>
