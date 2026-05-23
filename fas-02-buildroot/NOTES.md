@@ -607,6 +607,19 @@ make menuconfig
 Lägger till post build scriptet i system configuration<br>
 <img width="1783" height="829" alt="Skärmbild 2026-05-23 184304" src="https://github.com/user-attachments/assets/2cab5610-5cde-43b5-9eec-26655a727337" /><br>
 
+Buildroot har TVÅ "build script"-mekanismer:<br>
+
+BR2_ROOTFS_PRE_BUILD_SCRIPT     -körs FÖRE paket installeras<br>
+BR2_ROOTFS_POST_BUILD_SCRIPT    -körs EFTER paket installeras,<br>
+                                   FÖRE image-fil skapas<br>
+
+Menutext är förvirrande:<br>
+  "Custom scripts" (utan kvalifierare) = PRE<br>
+  "Custom scripts to run before creating filesystem images" = POST<br>
+  "Custom scripts to run after creating filesystem images" = POST_IMAGE<br>
+
+För target-modifikationer (symlinks, filer, permissions): använd POST.<br>
+PRE körs för tidigt — target-katalogen är tom då.<br>
 
 
 
