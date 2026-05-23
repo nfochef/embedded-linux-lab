@@ -1,3 +1,4 @@
+<img width="1783" height="829" alt="Skärmbild 2026-05-23 184304" src="https://github.com/user-attachments/assets/d0631ab0-d1ba-4d6c-9b51-47934250abfd" />
 # Fas 2 Buildroot
 Källkod , konfiguration in , image ut.
 Reproducerbarhet är minst lika viktigt som minimalism som den erhåller, produkten ska kunna byggas om identiskt om ~10 år.<br>
@@ -602,6 +603,10 @@ chmod +x ~/ws/embedded-linux-lab/fas-02-buildroot/scripts/post-build.sh
 Lägger till scriptet i Buildroot<br>
 cd ~/ws/buildroot
 make menuconfig
+
+Lägger till post build scriptet i system configuration<br>
+<img width="1783" height="829" alt="Skärmbild 2026-05-23 184304" src="https://github.com/user-attachments/assets/2cab5610-5cde-43b5-9eec-26655a727337" /><br>
+
 
 
 
