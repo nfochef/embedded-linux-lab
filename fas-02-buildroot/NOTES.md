@@ -621,6 +621,7 @@ BR2_ROOTFS_POST_BUILD_SCRIPT    -körs EFTER paket installeras,<br>
 För target-modifikationer (symlinks, filer, permissions): använd POST.<br>
 PRE körs för tidigt — target-katalogen är tom då.<br>
 
+<img width="1099" height="607" alt="Skärmbild 2026-05-23 185939" src="https://github.com/user-attachments/assets/8d389140-a79b-4a73-b160-3815d160cff4" />
 
 
 
