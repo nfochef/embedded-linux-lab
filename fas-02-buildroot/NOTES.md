@@ -596,11 +596,16 @@ fi<br>
 
 exit 0<br>
 EOF<br>
-chmod +x ~/ws/embedded-linux-lab/fas-02-buildroot/scripts/post-build.sh<br>
+chmod +x ~/ws/embedded-linux-lab/fas-02-buildroot/scripts/post-build.sh
+ 
 ---
 Lägger till scriptet i Buildroot<br>
 cd ~/ws/buildroot
 make menuconfig
+
+
+
+
 
 
 
