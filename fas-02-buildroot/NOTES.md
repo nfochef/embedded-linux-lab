@@ -623,7 +623,7 @@ PRE körs för tidigt — target-katalogen är tom då.<br>
 
 <img width="1099" height="607" alt="Skärmbild 2026-05-23 185939" src="https://github.com/user-attachments/assets/8d389140-a79b-4a73-b160-3815d160cff4" />
 
-### Pass 2.8.5 — Persistent logging via post-build script<br>
+### Persistent logging via post-build script<br>
 
 Problemet: Buildroot-default har /var/log som symlink till /tmp (tmpfs).<br>
 Loggar försvann vid reboot.<br>
