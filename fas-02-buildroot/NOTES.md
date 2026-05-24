@@ -623,7 +623,26 @@ PRE körs för tidigt — target-katalogen är tom då.<br>
 
 <img width="1099" height="607" alt="Skärmbild 2026-05-23 185939" src="https://github.com/user-attachments/assets/8d389140-a79b-4a73-b160-3815d160cff4" />
 
+### Pass 2.8.5 — Persistent logging via post-build script<br>
 
+Problemet: Buildroot-default har /var/log som symlink till /tmp (tmpfs).<br>
+Loggar försvann vid reboot.<br>
+
+Lösningen: post-build.sh som körs efter alla paket installerats men<br>
+innan image skapas. Scriptet raderar symlinken och skapar riktig katalog.<br>
+
+Konfigurerat genom:<br>
+  BR2_ROOTFS_POST_BUILD_SCRIPT i menuconfig<br>
+  "Custom scripts to run before creating filesystem images"<br>
+  (Menyetiketten är förvirrande — "before image" = POST_BUILD)<br>
+
+Verifierat över reboot: hello.log behöll båda boot-poster med olika<br>
+tidsstämplar. Bonus: syslogd-genererad /var/log/messages persisterar<br>
+också automatiskt.<br>
+
+**Avvägning vs default: persistens på rootfs sliter mer på SD-kort vid<br>
+hög skrivlast. För hög-volym i produktion: separat partition eller<br>
+remote syslog.**<br>
 
 
 
