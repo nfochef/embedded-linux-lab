@@ -644,7 +644,8 @@ också automatiskt.<br>
 hög skrivlast. För hög-volym i produktion: separat partition eller<br>
 remote syslog.**<br>
 
-
+**Lärdom av : git diff fas-02-buildroot/qemu_aarch64_lab_defconfig | head -20** <br>
+Hjälper till att lösa problem innan commit.. GÖR EN KOLL INNAN <br>
 
 
 
