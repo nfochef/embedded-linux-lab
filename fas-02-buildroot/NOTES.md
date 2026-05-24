@@ -636,7 +636,7 @@ Konfigurerat genom:<br>
   "Custom scripts to run before creating filesystem images"<br>
   (Menyetiketten är förvirrande — "before image" = POST_BUILD)<br>
 
-Verifierat över reboot: hello.log behöll båda boot-poster med olika<br>
+Kollat över reboot: hello.log behöll båda boot-poster med olika<br>
 tidsstämplar. Bonus: syslogd-genererad /var/log/messages persisterar<br>
 också automatiskt.<br>
 
@@ -647,5 +647,21 @@ remote syslog.**<br>
 **Lärdom av : git diff fas-02-buildroot/qemu_aarch64_lab_defconfig | head -20** <br>
 Hjälper till att lösa problem innan commit.. GÖR EN KOLL INNAN <br>
 
+### Viktig om savedefconfig...
+
+savedefconfig genererar en MINIMAL defconfig och bara skillnader mot<br>
+Buildroot-default. Tomma värden persisterar inte... När en option<br>
+"återställs" till default försvinner den ur defconfig vid nästa save vilket var förvirrande..<br>
+
+misstaget om man av misstag rensar en option och kör savedefconfig,<br>
+försvinner den från sparad konfig men även om imagen byggdes med den.<br>
+
+Värt att ALLTID köra "git diff" på defconfig innan commit. Om en rad<br>
+försvinner som du inte medvetet tog bort bara backa och fixa.<br>
+
+Bonus-insikt: target/-katalogen är persistent mellan byggen.<br>
+Att ta bort overlay-pekaren tar inte bort overlay-filerna från<br>
+target/. Bara nya byggen påverkas. För att verkligen rensa:<br>
+make clean.<br>
 
 
