@@ -712,6 +712,21 @@ qemu-system-aarch64       emulator för ARM64<br>
 -netdev/-device           virtio network<br>
 -drive/-device            virtio block storage<br>
 
+Några användbara kernel-parametrar att ha med sig.<br>
+quiet     minskar konsol-output under boot<br>
+printk.time=1 visar tidsstämplar i dmesg<br>
+rootwait  väntar på root-enhet<br>
+root=/dev/vda  visar vilken partition som är rootfs<br>
+console=ttyAMA0  visar vart konsol-output går<br>
+
+
+
+
+
+
+
+
+
 ---
   
 
