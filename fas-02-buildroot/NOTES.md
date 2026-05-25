@@ -687,5 +687,16 @@ proc/cmdline är en "virtuell fil" som inte finns på disk den läses dynamiskt 
 Innehåller exakt det som kerneln startades med via bootloader.<br>
 Samma data finns i dmesg-loggen som Kernel command line: men /proc/cmdline är enklare att läsa.<br>
 
+ När jag kör kommandon för att se tidsstämplar för kernel ( dmesg | grep -E "(Run /sbin/init|Booting Linux)"  )<br>
+ Så kan jag inte se det i min terminal som boken visar.<br> 
+ <img width="412" height="60" alt="Skärmbild 2026-05-25 165602" src="https://github.com/user-attachments/assets/3a32601a-9dc9-4633-b70a-8e31246cbb12" /><br>
+Efter sökande om varför jag inte kan se tidsstämplar. Min kernel-buffer har inga tidsstämplar helt enkelt den är så pass minimalistiskt i storleken att det är inte medtaget än men cat **/proc/uptime**
+ger mig min uptid. 2851.06 2837.17 uptid och idle tid. <br>
+Kernel-tidsstämplar kan slås på/av via:<br>
+ - Build-time: CONFIG_PRINTK_TIME i kernel-config<br>
+ - Runtime: printk.time=1 i kernel command line<br>
  
+
+ 
+
 
