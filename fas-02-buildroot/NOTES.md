@@ -696,7 +696,28 @@ Kernel-tidsstämplar kan slås på/av via:<br>
  - Build-time: CONFIG_PRINTK_TIME i kernel-config<br>
  - Runtime: printk.time=1 i kernel command line<br>
  
-**Slå på via printk.time=1 i kernel command line**
- 
+**Slå på via printk.time=1 i kernel command line**<br>
+ ---
+QEMU start-script struktur (start-lab.sh)<br>
+<img width="253" height="136" alt="Skärmbild 2026-05-25 171420" src="https://github.com/user-attachments/assets/c0b36231-3740-4397-9705-ed4876950e34" /><br>
+
+  qemu-system-aarch64       emulator för ARM64<br>
+  -M virt                   generic virtual machine<br>
+  -cpu cortex-a53           CPU-modell (matchar Pi Zero 2W)<br>
+  -nographic                no graphical window, console via terminal<br>
+  -smp 1                    one CPU core<br>
+  -kernel Image             kernel direkt (no bootloader needed)<br>
+  -append "..."             kernel command line<br>
+  -netdev/-device           virtio network<br>
+  -drive/-device            virtio block storage<br>
+  ---
+  
+
+
+
+
+
+
+
 
 
