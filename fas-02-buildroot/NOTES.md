@@ -678,10 +678,14 @@ dmesg | head -30<br>
 dmesg | tail -30<br>
 dmesg | wc -l<br>
 
-vad jag kan förvänta mig från dessa kommandon.
- - head: tidiga boot-meddelanden (CPU, memory, kernel init)
- - tail: senare boot-meddelanden (drivers, mountning, första processer)
- - wc -l: hur många rader totalt då kerneln säger en del
+vad jag kan förvänta mig från dessa kommandon.<br>
+ - head: tidiga boot-meddelanden (CPU, memory, kernel init)<br>
+ - tail: senare boot-meddelanden (drivers, mountning, första processer)<br>
+ - wc -l: hur många rader totalt då kerneln säger en hel del<br>
+   
+proc/cmdline är en "virtuell fil" som inte finns på disk den läses dynamiskt från kerneln.<br>
+Innehåller exakt det som kerneln startades med via bootloader.<br>
+Samma data finns i dmesg-loggen som Kernel command line: men /proc/cmdline är enklare att läsa.<br>
 
  
 
