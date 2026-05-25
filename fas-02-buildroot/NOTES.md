@@ -664,4 +664,5 @@ Att ta bort overlay-pekaren tar inte bort overlay-filerna från<br>
 target/. Bara nya byggen påverkas. För att verkligen rensa:<br>
 make clean.<br>
 
+# Boot-felsökning och dmesg-analys
 
