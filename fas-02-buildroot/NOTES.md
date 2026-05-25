@@ -666,12 +666,22 @@ make clean.<br>
 # Boot-felsökning och dmesg-analys
  ### Förståelsen för kernel parametrar och felsöka en image när den inte bootar. Magiskt att kunna när man inte kan läsa boot loggen.<br>
 
- dmesg = "diagnostic messages". Det är kernelns egen logg — varje rad är något kerneln skrev under boot eller runtime. Innehåller:
-
+ dmesg = "diagnostic messages". Det är kernelns egen logg, varje rad är något kerneln skrev under boot eller runtime.<br>
+DMSEG innehåller:<br>
 Hårdvaru-upptäckter ("CPU detected", "PCIe ranges", "virtio_blk")<br>
  - Driver-laddning ("rtc-pl031 registered")<br>
  - Filesystem-mountning ("EXT4-fs mounted readonly")<br>
  - Felmeddelanden från drivers<br>
  - Kernel panics och varningar<br>
+
+dmesg | head -30<br>
+dmesg | tail -30<br>
+dmesg | wc -l<br>
+
+vad jag kan förvänta mig från dessa kommandon.
+ - head: tidiga boot-meddelanden (CPU, memory, kernel init)
+ - tail: senare boot-meddelanden (drivers, mountning, första processer)
+ - wc -l: hur många rader totalt då kerneln säger en del
+
  
 
