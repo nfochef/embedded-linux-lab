@@ -664,5 +664,6 @@ target/. Bara nya byggen påverkas. För att verkligen rensa:<br>
 make clean.<br>
 
 # Boot-felsökning och dmesg-analys
- ### Förståelsen för kernel parametrar och felsöka en image när den inte bootar.<br>
+ ### Förståelsen för kernel parametrar och felsöka en image när den inte bootar. Magiskt att kunna när man inte kan läsa boot loggen.<br>
+ 
 
