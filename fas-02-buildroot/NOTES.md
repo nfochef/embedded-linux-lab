@@ -696,7 +696,7 @@ Kernel-tidsstämplar kan slås på/av via:<br>
  - Build-time: CONFIG_PRINTK_TIME i kernel-config<br>
  - Runtime: printk.time=1 i kernel command line<br>
  
-
+**Slå på via printk.time=1 i kernel command line**
  
 
 
