@@ -14,4 +14,24 @@ Tryck "/" i menuconfig för att söka på CONFIG namn.
 
 
 
-### Buildroots qemu/aarch64-virt/linux.config och vad seed:en gör
+### Buildroots qemu/aarch64-virt/linux.config och vad seed:en gör<br>
+
+76 rader som medvetna kernel-options för hela QEMU-virt-användning.<br>
+Allt annat ärvs som default från kerneln.<br>
+Kritiska virtio-options utan dessa så går det ej att boota QEMU.<br>
+ - CONFIG_VIRTIO_BLK     läs rootfs.ext2<br>
+ - CONFIG_VIRTIO_NET      nätverk<br>
+ - CONFIG_VIRTIO_PCI     PCI transport<br>
+ - CONFIG_VIRTIO_MMIO     MMIO transport<br>
+ - CONFIG_VIRTIO_CONSOLE   serial console<br>
+
+Det här är varför min Pi-defconfig inte bootade i QEMU förra<br>
+fasen — Pi-konfiger saknar virtio (Pi-hardvaran har inte<br>
+virtio). När jag bytte till qemu_aarch64_virt blev allt fixat.<br>
+
+Andra som är värda att nämna.<br>
+ - CONFIG_MODULES=y      kan ha LKM:er<br>
+ - CONFIG_OVERLAY_FS=y   container stöd<br>
+ - CONFIG_BRIDGE=m     som modul men inte inbyggt<br>
+
+ 
