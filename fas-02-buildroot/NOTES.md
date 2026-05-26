@@ -740,9 +740,17 @@ mellan .stamp_built (uppdaterad May 26) och .stamp_configured (orörd May 16)
 bevisade att rebuild hoppar över configure-steget helt. Samma mönster finns i Yocto sstate och även Docker layers.
 
 ---
+**Reflektion av detta kapitel.**
+Jag hade velat att boken skulle gå in mer på detaljer om vissa saker som nu i slutet med stamp filer osv , det blev en del sökningar kring dem samt saknades lite fördjupning linkningen.<br>
 
+ - Det jag inser som hjälper mig att inse hur viktigt det är med stamps då tidsstämpel skillnaden. vid byggen så säger det mer vilken typ av make jag ska köra.
 
-**Det jag inser som hjälper mig att inse hur viktigt det är med stamps då tidsstämpel skillnaden. vid byggen så säger det mer vilken typ av make jag ska köra.** 
+ - Fundamentalt Reproducerbart bygge  Defconfig + scripts = identisk image varje gång. En grund för för embedded-produktion.
+
+ - Gällande Paket-recipes, overlay-filer, post-build-scripts, så har jag har lärt mig när och vad jag ska välja i olika situationer.
+
+ - "dee-mess" dmesg först. och /proc/cmdline för boot. Stamp-filer för byggsteg. Samt git diff väldigt smidigt och användningsbart innan commit.
+
 
 
 
