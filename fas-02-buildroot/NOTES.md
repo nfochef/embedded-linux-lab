@@ -720,6 +720,24 @@ root=/dev/vda  visar vilken partition som är rootfs<br>
 console=ttyAMA0  visar vart konsol-output går<br>
 
 
+# Buildroots state machine och stamp-filer
+
+Tomma filer vars existens och tidsstämpel indikerar att ett byggsteg är klart , det är **Stamp-filer**.<br>
+
+När man kör make hello går Buildroot igenom stamp filerna.<br>
+Finns .stamp_downloaded? om nej, ladda ner, skapa filen
+Finns .stamp_extracted? om nej, packa upp, skapa filen
+Finns .stamp_patched? om nej, applicera patches, skapa filen
+
+Det jag hade i min hello stamp . (ls -la output/build/hello-1.0/ | grep stamp )<br>
+
+<img width="926" height="166" alt="Skärmbild 2026-05-26 090141" src="https://github.com/user-attachments/assets/14faefe9-8374-4158-bfc0-d898e2881e3f" /><br>
+
+rsync = Används för att synka från source till build directory. Ett steg som motsvarar extract för lokala paket.<br>
+
+Buildroot använder ju sig av stamp-filer (0-byte filer i output/build/<paket>/.stamp_*) som en state-tracker. Tidsstämpel skillnaden
+mellan .stamp_built (uppdaterad May 26) och .stamp_configured (orörd May 16)
+bevisade att rebuild hoppar över configure-steget helt. Samma mönster finns i Yocto sstate och även Docker layers.
 
 
 
@@ -727,7 +745,7 @@ console=ttyAMA0  visar vart konsol-output går<br>
 
 
 
----
+
   
 
 
