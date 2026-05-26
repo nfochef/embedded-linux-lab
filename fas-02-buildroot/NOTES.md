@@ -739,9 +739,10 @@ Buildroot använder ju sig av stamp-filer (0-byte filer i output/build/<paket>/.
 mellan .stamp_built (uppdaterad May 26) och .stamp_configured (orörd May 16)
 bevisade att rebuild hoppar över configure-steget helt. Samma mönster finns i Yocto sstate och även Docker layers.
 
+---
 
 
-
+**Det jag inser som hjälper mig att inse hur viktigt det är med stamps då tidsstämpel skillnaden. vid byggen så säger det mer vilken typ av make jag ska köra.** 
 
 
 
