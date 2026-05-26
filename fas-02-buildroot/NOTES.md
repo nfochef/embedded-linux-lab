@@ -751,6 +751,7 @@ Jag hade velat att boken skulle gå in mer på detaljer om vissa saker som nu i 
 
  - "dee-mess" dmesg först. och /proc/cmdline för boot. Stamp-filer för byggsteg. Samt git diff väldigt smidigt och användningsbart innan commit.
 
+ - Felmeddelanden behöver jag läsa mer grundligt. När legal-info gav mig WARNING trots att jag trodde jag fixat det, så var det för att jag hoppat över hello.mk-ändringen. om jag hade gjort git diff hade det visat det direk.
 
 
 
