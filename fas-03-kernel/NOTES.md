@@ -25,8 +25,7 @@ Kritiska virtio-options utan dessa så går det ej att boota QEMU.<br>
  - CONFIG_VIRTIO_MMIO     MMIO transport<br>
  - CONFIG_VIRTIO_CONSOLE   serial console<br>
 
-Det här är varför min Pi-defconfig inte bootade i QEMU förra<br>
-fasen — Pi-konfiger saknar virtio (Pi-hardvaran har inte<br>
+Det här är precis varför min pi-defconfig inte bootade i QEMU förra kapitlet min pi-konfiger saknade virtio (pi-hardvaran har inte<br>
 virtio). När jag bytte till qemu_aarch64_virt blev allt fixat.<br>
 
 Andra som är värda att nämna.<br>
