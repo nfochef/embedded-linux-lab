@@ -2,6 +2,9 @@
 
 ### menuconfig tolka och sök i options
 
+cd ~/ws/buildroot<br>
+make linux-menuconfig<br>
+
 <img width="1070" height="386" alt="Skärmbild 2026-05-26 182133" src="https://github.com/user-attachments/assets/2affd6ae-5f2f-4c32-97c0-e9a1fc72e2bb" />
 
 <img width="1166" height="228" alt="Skärmbild 2026-05-26 181452" src="https://github.com/user-attachments/assets/f22a61fd-5413-4395-a1d0-175bf1da11be" />
@@ -39,3 +42,16 @@ Exempel på Hårdvara som visar PL011.<br>
  - CONFIG_SERIAL_AMBA_PL011_CONSOLE=y   och den konsol-funktionalitet<br>
  - CONFIG_RTC_DRV_PL031=y       ARM PrimeCell Real-Time Clock<br>
  - CONFIG_ARM_SMMU_V3=y     IOMMU för ARM"<br>
+
+Kerneln behöver veta vilka hårdvarustubbar den ska prata med. Saknas en drivrutin så går det inte att kommunicera med den!.<br>
+Min Seed-fil, 76 rader, 4200 rader expanderat och en kernel-Image på 13 MB.<br>
+76 rader medvetna kernel-options för QEMU-virt användning.<br>
+Allt annat ärvs som default från kerneln.<br>
+
+
+
+
+
+
+
+
