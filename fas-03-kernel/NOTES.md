@@ -91,10 +91,12 @@ Lösningen är spara slump över boots.<br>
 Vid varje boot som börjar med ackumulerad entropi från tidigare sessions.<br>
 Seed-filen ändras efter användning. Om du klonar ett SD-kort-image så har båda kopiorna samma seed till samma slump vid första boot. Det är en sårbarhet i embedded produktion då den ska generera ny seed vid första boot per enhet.<br>
 
-SEED = 
-Entropi = 
+SEED = En template, startkonfiguration eller en basconfig. <br>
+Entropi = hur mycket oförutsägbar slumpmässighet som finns tex . Bra entropi = 8f3a91c2d44e7b... , Dålig = 1234..<br>
 
 
+
+# kernel-modul (LKM)
 
 
 
