@@ -97,6 +97,7 @@ Entropi = hur mycket oförutsägbar slumpmässighet som finns tex . Bra entropi 
 
 
 # kernel-modul (LKM)
+Tanken att lära mig att skriva en .ko-fil som ska bli en del av kerneln vid runtime. jag ska loada in den, ser meddelandet i dmesg, och kan ta ut den igen.<br>
 
 
 
