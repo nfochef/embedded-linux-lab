@@ -33,4 +33,9 @@ Andra som är värda att nämna.<br>
  - CONFIG_OVERLAY_FS=y   container stöd<br>
  - CONFIG_BRIDGE=m     som modul men inte inbyggt<br>
 
- 
+PL011 är PrimeCell-namnet på ARM:s standard UART-controller. När jag loggar in i QEMU så pratar den med en virtuell PL011.Däremot på en riktig pi Zero 2W finns där en liknande UART, men inte den PL011-versionen.<br>
+Exempel på Hårdvara som visar PL011.<br>
+"CONFIG_SERIAL_AMBA_PL011=y    ARM PrimeCell UART (min konsoll)<br>
+CONFIG_SERIAL_AMBA_PL011_CONSOLE=y   och den konsol-funktionalitet<br>
+CONFIG_RTC_DRV_PL031=y       ARM PrimeCell Real-Time Clock<br>
+CONFIG_ARM_SMMU_V3=y     IOMMU för ARM"<br>
