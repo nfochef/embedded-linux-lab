@@ -92,7 +92,7 @@ Vid varje boot som börjar med ackumulerad entropi från tidigare sessions.<br>
 Seed-filen ändras efter användning. Om du klonar ett SD-kort-image så har båda kopiorna samma seed till samma slump vid första boot. Det är en sårbarhet i embedded produktion då den ska generera ny seed vid första boot per enhet.<br>
 
 SEED = En template, startkonfiguration eller en basconfig. <br>
-Entropi = hur mycket oförutsägbar slumpmässighet som finns tex . Bra entropi = 8f3a91c2d44e7b... , Dålig = 1234..<br>
+Entropi = hur mycket oförutsägbar slumpmässighet som finns tex . Bra entropi = 5f3a9Xc2d4Ye7b... , Dålig = 1234..<br>
 
 
 
