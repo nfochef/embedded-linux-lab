@@ -57,9 +57,21 @@ Verifiering av lyckad aktivering:<br>
 <img width="536" height="49" alt="Skärmbild 2026-05-27 081309" src="https://github.com/user-attachments/assets/5bfe3ed3-0998-4a10-b4fe-e03ca2b82eb9" /><br>
 
 
+### Kernel-randomness och seed-filer
 
+Noterade att vid poweroff i QEMU så står det att "Saving 256 bits of creditable seed for next boot" och jag vistte inte vad det var som den sparade. Sökning gav:<br>
+Kerneln behöver entropi för säkerhetsfunktioner (kryptering, ASLR).<br>
+Vid boot är entropi-poolen tom och ger problem på embedded-enheter utan mus/tangentbord/nätverkstrafik etc..<br>
 
+Lösningen är spara slump över boots.<br>
+ - Shutdown: kerneln skriver 256 bitar till /var/lib/seedrng/<br>
+ - Boot:     S01seedrng-script seedar kerneln med samma 256 bitar<br>
+  
+Vid varje boot som börjar med ackumulerad entropi från tidigare sessions.<br>
+Seed-filen ändras efter användning. Om du klonar ett SD-kort-image så har båda kopiorna samma seed till samma slump vid första boot. Det är en sårbarhet i embedded produktion då den ska generera ny seed vid första boot per enhet.<br>
 
+SEED = 
+Entropi = 
 
 
 
