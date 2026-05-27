@@ -71,6 +71,12 @@ I embedded måste man välja varje en medvetet och man väljer ofta AV för att 
 Verifiering av lyckad aktivering:<br>
 <img width="536" height="49" alt="Skärmbild 2026-05-27 081309" src="https://github.com/user-attachments/assets/5bfe3ed3-0998-4a10-b4fe-e03ca2b82eb9" /><br>
 
+Sparat tillbaka till Buildroot-trädet med "make linux-update-defconfig".<br>
+Även har jag kopierat linux.config till mitt repo som snapshot.<br>
+"make linux-update-defconfig" la även till en rad om CONFIG_GCC_PLUGINS den savedefconfig-mekaniken är petig med att<br>
+fånga exakt nuvarande state, även för options som behöver explicit "is not set" deklaration.<br>
+
+
 
 ### Kernel-randomness och seed-filer
 
