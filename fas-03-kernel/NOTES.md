@@ -48,6 +48,18 @@ Min Seed-fil, 76 rader, 4200 rader expanderat och en kernel-Image på 13 MB.<br>
 76 rader medvetna kernel-options för QEMU-virt användning.<br>
 Allt annat ärvs som default från kerneln.<br>
 
+### Aktivering av PRINTK_TIME<br>
+
+<img width="887" height="425" alt="Skärmbild 2026-05-27 075737" src="https://github.com/user-attachments/assets/e965187f-2aee-4924-9e62-1e9fc4b08d8d" /><br>
+
+
+Verifiering av lyckad aktivering:<br>
+<img width="536" height="49" alt="Skärmbild 2026-05-27 081309" src="https://github.com/user-attachments/assets/5bfe3ed3-0998-4a10-b4fe-e03ca2b82eb9" /><br>
+
+
+
+
+
 
 
 
