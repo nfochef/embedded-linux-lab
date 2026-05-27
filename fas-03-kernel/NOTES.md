@@ -49,6 +49,21 @@ Min Seed-fil, 76 rader, 4200 rader expanderat och en kernel-Image på 13 MB.<br>
 Allt annat ärvs som default från kerneln.<br>
 
 ### Aktivering av PRINTK_TIME<br>
+kernel modifikation
+
+Slog på CONFIG_PRINTK_TIME i menuconfig (Kernel hacking -> printk and dmesg options -> Show timing information on printks).<br>
+Kerneln byggdes om via make linux-rebuild. Vilket gick ganska snabbt. <br>
+Verifiering vid boot:<br>
+- dmesg har [X.XXXXXX]-tidsstämplar from start<br>
+- INTE behövdes printk.time=1 på command line<br>
+- /proc/cmdline visar bara rootwait root=/dev/vda console=ttyAMA0<br>
+
+Nu har jag kompilerat IN funktionaliteten.<br>
+Detta är skillnaden mellan "konfigurera" och "modifiera" kerneln.<br>
+
+WSL2:s egna kernel har också PRINTK_TIME=y<br>
+På desktop/server är de flesta säkerhets/debug-options PÅ.<br>
+I embedded måste man välja varje en medvetet och man väljer ofta AV för att spara plats och boot-tid.<br>
 
 <img width="887" height="425" alt="Skärmbild 2026-05-27 075737" src="https://github.com/user-attachments/assets/e965187f-2aee-4924-9e62-1e9fc4b08d8d" /><br>
 
