@@ -102,5 +102,6 @@ Vad det är, en kernel-modul är C-kod som körs i kernel-space istället för u
 Verkligen stor skillnad mot applications kod..<br>
 
 
-
-
+När man installerar nya enheter eller felsöker befintliga är **insmod, rmmod, lsmod, modinfo och dmesg** dom dagliga verktygen.<br>
+Min modul är en del av kerneln när den är laddad. Med precis samma privilegier som kerneln själv. Det är därför moduler kan crash:a hela systemet om man gör fel och det ger en anledning till varför vi alltid testar i QEMU innan<br>
+den hamnar på fysisk hårdvara.<br>
