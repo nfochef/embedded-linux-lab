@@ -131,4 +131,14 @@ Väl användbara Buildroot kommandon vid bygge av kernel: <br>
   - Filer som reprensenterar hårdvaruenheter.<br>
   - Man läser och skriver till dem för att kunna prata med hårdvaran.<br>
   - /dev/dva är min disk, /dev/null är papperskorgen, /dev/zero ger nollor.<br>
+---
+cat /proc/1/ ger mig init processen, då varje filmapp i /proc/1/ är ett fönster in i initprocessen .  Detta finns för varje process. verkty som ps, top och htop fungerar så att de läser /proc/pid/ katalogerna och sammanställer dem i det här är det bara filer inget "API som processerar".<br>
+
+/sys/class/ ger enheter efter typ , kernels taxonomi över hårdvarutyper
+
+Klassiska /dev experiment dök upp vid sökning.
+echo "detta försvinner" > /dev/null
+head -c 16 /dev/zero | hexdump -C
+head -c 16 /dev/urandom | hexdump -C
+
   
