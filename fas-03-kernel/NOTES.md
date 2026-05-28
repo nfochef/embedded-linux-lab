@@ -115,3 +115,20 @@ Väl användbara Buildroot kommandon vid bygge av kernel: <br>
 
 
  # /proc, /sys och /dev
+ Jag behöver förstå tre virtuella filsystem som är kernels gränssnitt mot userspace. De tre proc, sys och dev alla är virutella och tar ingen plats på rootfs kernel genererar innehållet dynamiskt.<br>
+ Linux har en designprincip "allt är en fil". Kernel information och hårdvara exponeras som filer, Tre virtuella filsystem gör detta:<br>
+
+ /proc: Processer och kernel information.<br>
+  - förut var det för process information.<br>
+  - innehåler också kernel parametrar, minne, CPU info.<br>
+  - Filer finns ej på Disk, Kernel genererar innehållet när man läser.<br>
+
+ /sys: hårdvara och drivrutiner(sysfs)<br>
+  - En mer modern strukturerad översikt av enheter, drivisar och kernel objekt.<br>
+     - hierarkisk<br>
+
+ /dev: enhetsnoder dvs devtmpfs<br>
+  - Filer som reprensenterar hårdvaruenheter.<br>
+  - Man läser och skriver till dem för att kunna prata med hårdvaran.<br>
+  - /dev/dva är min disk, /dev/null är papperskorgen, /dev/zero ger nollor.<br>
+  
