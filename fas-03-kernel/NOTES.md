@@ -112,3 +112,6 @@ Väl användbara Buildroot kommandon vid bygge av kernel: <br>
  - make linux-update-defconfig, spara nuvarande konfig som ny defconfig<br>
  - make linux-dirclean, radera kernel-byggkatalogen, börja om<br>
  - make linux-source, bara ladda ner källkoden<br>
+
+
+ # /proc, /sys och /dev
