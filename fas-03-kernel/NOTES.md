@@ -52,7 +52,7 @@ Allt annat ärvs som default från kerneln.<br>
 kernel modifikation
 
 Slog på CONFIG_PRINTK_TIME i menuconfig (Kernel hacking -> printk and dmesg options -> Show timing information on printks).<br>
-Kerneln byggdes om via make linux-rebuild. Vilket gick ganska snabbt. <br>
+Kerneln byggdes om via make linux-rebuild. Vilket gick snabbt. <br>
 Verifiering vid boot:<br>
 - dmesg har [X.XXXXXX]-tidsstämplar from start<br>
 - INTE behövdes printk.time=1 på command line<br>
@@ -94,7 +94,7 @@ Seed-filen ändras efter användning. Om du klonar ett SD-kort-image så har bå
 SEED = En template, startkonfiguration eller en basconfig. <br>
 Entropi = hur mycket oförutsägbar slumpmässighet som finns tex . Bra entropi = 5f3a9Xc2d4Ye7b... , Dålig = 1234..<br>
 
-
+Kernel-crash-felsökning. cat /proc/sys/kernel/tainted visar en numerisk flagga. dmesg | grep -i taint visar alla taint-orsaker.<br>
 
 # kernel-modul (LKM)
 Tanken att lära mig att skriva en .ko-fil som ska bli en del av kerneln vid runtime. jag ska loada in den, ser meddelandet i dmesg, och kan ta ut den igen.<br>
@@ -105,3 +105,10 @@ Verkligen stor skillnad mot applications kod..<br>
 När man installerar nya enheter eller felsöker befintliga är **insmod, rmmod, lsmod, modinfo och dmesg** dom dagliga verktygen.<br>
 Min modul är en del av kerneln när den är laddad. Med precis samma privilegier som kerneln själv. Det är därför moduler kan crash:a hela systemet om man gör fel och det ger en anledning till varför vi alltid testar i QEMU innan<br>
 den hamnar på fysisk hårdvara.<br>
+
+Väl användbara Buildroot kommandon vid bygge av kernel: <br>
+ - make linux-menuconfig — öppna kernel-menuconfig<br>
+ - make linux-rebuild — bygg om kerneln efter konfig-ändring<br>
+ - make linux-update-defconfig — spara nuvarande konfig som ny defconfig<br>
+ - make linux-dirclean — radera kernel-byggkatalogen, börja om<br>
+ - make linux-source — bara ladda ner källkoden<br>
