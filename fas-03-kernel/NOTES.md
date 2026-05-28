@@ -107,8 +107,8 @@ Min modul är en del av kerneln när den är laddad. Med precis samma privilegie
 den hamnar på fysisk hårdvara.<br>
 
 Väl användbara Buildroot kommandon vid bygge av kernel: <br>
- - make linux-menuconfig — öppna kernel-menuconfig<br>
- - make linux-rebuild — bygg om kerneln efter konfig-ändring<br>
- - make linux-update-defconfig — spara nuvarande konfig som ny defconfig<br>
- - make linux-dirclean — radera kernel-byggkatalogen, börja om<br>
- - make linux-source — bara ladda ner källkoden<br>
+ - make linux-menuconfig, öppna kernel-menuconfig<br>
+ - make linux-rebuild, bygg om kerneln efter konfig-ändring<br>
+ - make linux-update-defconfig, spara nuvarande konfig som ny defconfig<br>
+ - make linux-dirclean, radera kernel-byggkatalogen, börja om<br>
+ - make linux-source, bara ladda ner källkoden<br>
