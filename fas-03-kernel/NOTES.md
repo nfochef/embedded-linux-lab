@@ -131,14 +131,38 @@ Väl användbara Buildroot kommandon vid bygge av kernel: <br>
   - Filer som reprensenterar hårdvaruenheter.<br>
   - Man läser och skriver till dem för att kunna prata med hårdvaran.<br>
   - /dev/dva är min disk, /dev/null är papperskorgen, /dev/zero ger nollor.<br>
+
+ Sensor svarar inte gå till /dev/i2c-*, /sys/class/, dmesg<br>
+ Driver laddad?  kolla /proc/modules, /sys/module/<br>
+ Temperatur kolla /sys/class/thermal/.../temp<br>
+ Nätverk uppe? se /sys/class/net/<br>
+
+
+
+
+  
 ---
 cat /proc/1/ ger mig init processen, då varje filmapp i /proc/1/ är ett fönster in i initprocessen .  Detta finns för varje process. verkty som ps, top och htop fungerar så att de läser /proc/pid/ katalogerna och sammanställer dem i det här är det bara filer inget "API som processerar".<br>
 
-/sys/class/ ger enheter efter typ , kernels taxonomi över hårdvarutyper
+/sys/class/ ger enheter efter typ , kernels taxonomi över hårdvarutyper<br>
 
-Klassiska /dev experiment dök upp vid sökning.
-echo "detta försvinner" > /dev/null
-head -c 16 /dev/zero | hexdump -C
-head -c 16 /dev/urandom | hexdump -C
+Klassiska /dev experiment dök upp vid sökning.<br>
+echo "detta försvinner" > /dev/null<br>
+head -c 16 /dev/zero | hexdump -C<br>
+head -c 16 /dev/urandom | hexdump -C<br>
 
-  
+Enhetsnoder med deras struktur;<br>
+<img width="649" height="297" alt="Skärmbild 2026-05-28 112822" src="https://github.com/user-attachments/assets/721e4408-aafa-45d6-a40f-a63ab37c3e33" /><br>
+
+Tolkning av bokstäver, C = character device , b = block device , s = socket, l = symlink<br>
+Siffror i stället för storlekar | 1, 3 = null | 1, 5 = zero | 1,1 = mem | 1, 11 = kmsg Dessa är Kallade MAJOR 1 och är "memory devices" Minor identifierar vilken.<br>
+MAJOR 5 är "TTY relaterade" 5, 1 = console.<br>
+På så vis vet kernel vart en operation ska skickas skriver jag till /dev/null så skickar kernel "major 1, minor 3 och dirigerar til minnes drivrutinen's null hantering tillex.<br>
+
+
+
+
+
+
+
+
