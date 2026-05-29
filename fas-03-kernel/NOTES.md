@@ -161,6 +161,16 @@ På så vis vet kernel vart en operation ska skickas skriver jag till /dev/null 
 
 
 # Device Tree basics
+Kernal använder sig av en datastruktur som kallas device tree även känd som "flattend device tree or FDT"<br>
+QEMU genererar device tree dynamiskt baserat på mina -device-flaggor. Device tree har fil som beskriver hårdvaran tex att det finns en UART på adress 0x80000000 osv.<br>
+samma kernel kan köras på tusentals boards men device tree filen skiljer sig åt. utan device tree skulle tex ARM kernel behöva hårdkoda varje hårdvarukombination. <br>
+Det finns tre filformat;<br>
+ - .dts - Device Tree Source. Mänskligt läsbar text. Det du editerar.<br>
+ - .dtb - Device Tree Blob. Kompilerad binär. Det kerneln läser.<br>
+ - .dtsi - Source Include. Delas mellan flera boards.<br>
+Kompilatorn heter dtc (device tree compiler)<br>
+
+
 
 
 
