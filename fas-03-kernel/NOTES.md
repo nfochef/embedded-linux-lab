@@ -160,7 +160,7 @@ MAJOR 5 är "TTY relaterade" 5, 1 = console.<br>
 På så vis vet kernel vart en operation ska skickas skriver jag till /dev/null så skickar kernel "major 1, minor 3 och dirigerar til minnes drivrutinen's null hantering tillex.<br>
 
 
-
+# Device Tree basics
 
 
 
