@@ -173,6 +173,8 @@ Kompilatorn heter dtc (device tree compiler)<br>
 Stdout-path i chosen-noden bestämmer default-konsol.
 rng-seed och kaslr-seed = säkerhetsdetaljer från QEMU/bootloader.
 
+elsökning vid hårdvaruproblem; börja med device tree, kontrollera
+compatible sträng, adresser, interrupt konfiguration.
 
 
 
