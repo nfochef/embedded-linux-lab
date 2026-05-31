@@ -176,7 +176,16 @@ rng-seed och kaslr-seed = säkerhetsdetaljer från QEMU/bootloader.<br>
 elsökning vid hårdvaruproblem; börja med device tree, kontrollera<br>
 compatible sträng, adresser, interrupt konfiguration.<br>
 
-Bra minnes tänk;<br>
+#### Bra minnes tänk;<br>
 Device tree är statisk konfiguration (vad kan finnas)<br>
 Kerneln är runtime-verifierare (vad finns faktiskt)<br>
 /sys exponerar resultatet (vad blev konfigurerat)<br>
+
+Och när en sensor inte funkar;<br>
+Kolla device tree, finns noden? Rätt adress? Rätt compatible?<br>
+Kolla dmesg, laddades drivrutinen? Vilket meddelande?<br>
+Kolla /sys, registrerades enheten? På rätt buss?<br>
+
+Om device tree säger ja, dmesg och säger nej, så är det sannolikt att det är drivrutinen som är problemet.<br>
+Om device tree säger ja och dmesg säger ja, men /sys saknas, då kan det var sondering/initialisering problem.<br>
+
