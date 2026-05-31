@@ -170,12 +170,13 @@ Det finns tre filformat;<br>
  - .dtsi - Source Include. Delas mellan flera boards.<br>
 Kompilatorn heter dtc (device tree compiler)<br>
 
-Stdout-path i chosen-noden bestämmer default-konsol.
-rng-seed och kaslr-seed = säkerhetsdetaljer från QEMU/bootloader.
+Stdout-path i chosen-noden bestämmer default-konsol.<br>
+rng-seed och kaslr-seed = säkerhetsdetaljer från QEMU/bootloader.<br>
 
-elsökning vid hårdvaruproblem; börja med device tree, kontrollera
-compatible sträng, adresser, interrupt konfiguration.
+elsökning vid hårdvaruproblem; börja med device tree, kontrollera<br>
+compatible sträng, adresser, interrupt konfiguration.<br>
 
-
-
-
+Bra minnes tänk;<br>
+Device tree är statisk konfiguration (vad kan finnas)<br>
+Kerneln är runtime-verifierare (vad finns faktiskt)<br>
+/sys exponerar resultatet (vad blev konfigurerat)<br>
