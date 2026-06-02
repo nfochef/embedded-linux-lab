@@ -1,10 +1,8 @@
 # Makefile för out-of-tree kernel modul
-#
-# användning:
-#   make            — bygger .ko filen
-#   make clean      — tabort och bygger artifakter
-#
-# Kräver KDIR görs till kernel källa/build directory:
+## användning:
+#   make    bygger .ko filen
+#   make clean  tarbort och bygger artifakter
+## Kräver att KDIR görs till kernel källa/build directory:
 #   make KDIR=/path/to/kernel-build
 
 obj-m += hello_kernel.o
