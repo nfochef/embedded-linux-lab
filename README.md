@@ -27,7 +27,7 @@ Kommande:
 - **fas-06-application/** tillämpa allt på Open Habitat-projektet (Gatewayn)
 
 ## Hur jag arbetar
-Jag använder mig främst av "Mastering Embedded Linux Development" -boken [](https://www.adlibris.com/sv/bok/mastering-embedded-linux-development-9781803232591) som Cookbook och Ai (Perplex samt Claude) för struktur och guidning
+Jag använder mig främst av "Mastering Embedded Linux Development" -boken [Länk till bok](https://www.adlibris.com/sv/bok/mastering-embedded-linux-development-9781803232591) som Cookbook och Ai (Perplex samt Claude) för struktur och guidning
 NOTES.md används som tankar och guide för mig själv, varje "fas" innehåller arbetsanteckningar, beslut, fel/problem jag stött på samt lösningar. 
 README.md är översikten och mer strukturerad och inte "wall of text".
 
