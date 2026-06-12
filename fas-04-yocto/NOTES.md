@@ -13,3 +13,7 @@ Layer (metan) mappen med recept och konfigurationer. Hela Yoctos arkitektur bygg
 Machine - målhårdvaran (qemuarm64, raspberrypi0-2w-64). Motsvarar Buildroots defconfig-val.<br>
 Image = slutprodukten (core-image minimal). Motsvarar min rootfs.ext2.<br>
 sstate cache som en "delbar" bygg cache. typ kraften för yotco.<br>
+
+Lager modellen är mer el mindra att man rör aldrig någon annans kod. Man lägger på ett lager åvanpå istället så orginalet blir orört så ändringen man gjort ligger ovanpå. Vid uppdatering så byter man ut de undre lagren, tillskillnad mot buildroot. 
+
+
