@@ -25,7 +25,6 @@ Scarthgap är min valda Yocto-release då min bok Mastering Embedded Linux Devel
 
 <img width="629" height="119" alt="Skärmbild 2026-06-12 153648" src="https://github.com/user-attachments/assets/ce87f6e0-aabb-4d5a-a0e1-1b2521e65d69" /><br>
 
-<img width="905" height="98" alt="Skärmbild 2026-06-12 153855" src="https://github.com/user-attachments/assets/b4a759e2-8bcc-4273-ba83-458898962531" /><br>
 
 <img width="911" height="549" alt="Skärmbild 2026-06-12 153919" src="https://github.com/user-attachments/assets/08568ac0-31fb-445d-87a9-f218a7a1c7ba" /><br>
 
