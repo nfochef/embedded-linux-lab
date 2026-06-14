@@ -32,6 +32,7 @@ Scarthgap är min valda Yocto-release då min bok Mastering Embedded Linux Devel
 <img width="683" height="242" alt="Skärmbild 2026-06-12 173000" src="https://github.com/user-attachments/assets/1d1e0f15-25a4-4e92-a0ba-e3796eb1b11e" /><br>
 
 
-
+Första bygget lyckades 4060 tasks , 42 varningar - do_fetch som föll tillbaka på mirrors när URL missade, vilket är normalt , Yocto har sina primära källor med speglar för ev fel. 
+Output i tmp/deploy/images/quemuarm64 motsvarar Buildroots output/images och boots med **runqemu qemuarm64 nographic**.
 
 
