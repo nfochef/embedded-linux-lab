@@ -35,3 +35,15 @@ Första bygget lyckades 4060 tasks , 42 varningar - do_fetch som föll tillbaka 
 Output i tmp/deploy/images/quemuarm64 motsvarar Buildroots output/images och boots med **runqemu qemuarm64 nographic**.
 
 
+ ### Distro: Poky 5.0.18 (Scarthgap LTS), kernel 6.6.127-yocto-standard.<br>
+
+I denna Build så finns det vissa skillnader mot Buildroot:<br>
+- CPU: Cortex-A57 (0xd07) mot Buildroots A53 (0xd03), matchar TUNE_FEATURES<br>
+- 4 kärnor + 256 MB mot Buildroots 1 kärna + 128 MB<br>
+- K-bygginformation: "oe-user@oe-host" Yocto gjorde mitt namn anonymiserat till oe-user..<br>
+  Yocto vill ha bit för bit identiska byggen oavsett vem som bygger. För reproducerbarhet<br>
+- Init: sysvinit + udev + populate-volatile.sh + read-only-rootfs-hook<br>
+  Yocto har strukturerade lösningar för saker jag löste manuellt i<br>
+  Buildroot (t.ex persistent logging via volatile-hantering).<br>
+
+Använd /etc/issue för distro-id.<br>
