@@ -49,3 +49,26 @@ I denna Build så finns det vissa skillnader mot Buildroot:<br>
   Buildroot (t.ex persistent logging via volatile-hantering).<br>
 
 Använd /etc/issue för distro-id.<br>
+
+Tänker att jag behöver kolla upp lite hur strukturen är Poky rooten: <br>
+
+<img width="548" height="443" alt="Skärmbild 2026-06-21 104505" src="https://github.com/user-attachments/assets/3ca7e0a1-ce8a-4ebe-9075-3505bfdae182" /> <br>
+
+jag ser Poky rootens lager (det yocto byggs av) dvs meta katalogerna.<br>
+
+meta/ oe-core, hjärtat. Alla grundrecept.<br>
+meta-poky/ poky-distrons policy och konfiguration<br>
+meta-yocto-bsp/ board support (hårdvarustöd)<br>
+meta-skeleton/ mallar för egna recept<br>
+meta-selftest/ Yoctos testrecept <br>
+
+Verktyg (motorn):<br>
+bitbake/ själva bygg-motorn (Python)<br>
+scripts/ runqemu, oe-* (det source la i PATH och se till att den är ren)<br>
+oe-init-build-env skriptet jag source:ar<br>
+
+Mina enga genererade kataloger som inte är en  del av poky-källan:<br>
+build-qemuarm64/ min build-katalog (conf/, tmp/)<br>
+downloads/ DL_DIR, nedladdad källkod...<br>
+sstate-cache/ cachade task resultat..<br>
+
