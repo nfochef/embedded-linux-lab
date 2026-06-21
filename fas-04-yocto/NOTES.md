@@ -87,4 +87,8 @@ Rreceptet som är mitt första riktiga yocto-recept. Det jag byggde ifrån är i
   ${@python...}           = inline Python vid parsning<br>
   bb.utils.contains(...)  = villkorlig logik (om systemd → +4MB)<br>
 
+
+
+  
+
   
