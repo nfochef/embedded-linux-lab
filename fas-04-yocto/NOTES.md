@@ -19,6 +19,8 @@ Lager modellen är mer el mindra att man rör aldrig någon annans kod. Man läg
 sstate cache är tasks och signaturer, bitbake byter varje paket i tasks, varje task får en signatur, dvs den chachas och nr man kör en task så finns det redan en chach av dem då hämtas paketet på sekunden istället för att det ska kompileras om.
 nackdelen är att det tar lång tid första gången det ska byggas men vid om byggnad tar det väldigt kort tid.  man kan även dela chachen mellan utvecklare via något som heter NFS/S3 då min kollegas kompilering blir min.
 
+<img width="3468" height="4624" alt="20260621_103438" src="https://github.com/user-attachments/assets/da3ac3ae-5a37-4e15-93df-7f03ce37bf25" /><br>
+
 # Scarthgap (Yocto 5.0 med LTS till 2028)
 Scarthgap är min valda Yocto-release då min bok Mastering Embedded Linux Development bygger på.
 
