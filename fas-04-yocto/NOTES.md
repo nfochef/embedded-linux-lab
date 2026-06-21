@@ -87,6 +87,8 @@ Rreceptet som är mitt första riktiga yocto-recept. Det jag byggde ifrån är i
   ${@python...}           = inline Python vid parsning<br>
   bb.utils.contains(...)  = villkorlig logik (om systemd → +4MB)<br>
 
+Det jag ser som mest av värde att försöka komma ihåg är IMAGE_INSTALL styr image innehållet, inherit ger receptet kraft, :append och ${@python} är overide och logik mekaniken.<br>
+Yocto har mycket rikare DSL (inheritance, :append och inline python) som ger mer kraft och känns som att det är väldigt mycket mer att lära.<br>
 
 
   
