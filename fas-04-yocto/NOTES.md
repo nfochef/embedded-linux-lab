@@ -72,3 +72,19 @@ build-qemuarm64/ min build-katalog (conf/, tmp/)<br>
 downloads/ DL_DIR, nedladdad källkod...<br>
 sstate-cache/ cachade task resultat..<br>
 
+Poky binder ihop fristående lager, README symlinkarna pekar in i lagrena som är ännu ett bevis på den modulära designen. 
+Rreceptet som är mitt första riktiga yocto-recept. Det jag byggde ifrån är inte många rader<br>
+
+<img width="764" height="208" alt="Skärmbild 2026-06-21 115536" src="https://github.com/user-attachments/assets/3aff78a6-23ef-4167-805e-ed1da0661b5a" /><br>
+
+ IMAGE_INSTALL          = vad som hamnar i imagen (HUVUDSPAKEN)<br>
+                           packagegroup-core-boot = minsta bootbara<br>
+                           ${CORE_IMAGE_EXTRA_INSTALL} = sätt i local.conf<br>
+  inherit core-image     = ärver HUR man bygger image från klassen<br>
+                           Receptet säger VAD, klassen gör HUR<br>
+  IMAGE_ROOTFS_SIZE ?=    = ?= svag tilldelning (om ej satt)<br>
+  VARIABLE:append =       = LÄGG TILL i variabel (override-syntax)<br>
+  ${@python...}           = inline Python vid parsning<br>
+  bb.utils.contains(...)  = villkorlig logik (om systemd → +4MB)<br>
+
+  
