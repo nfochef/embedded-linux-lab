@@ -112,6 +112,35 @@ Därav ligger sstate_dir utanför build katalogen local.conf och om jag raderar 
 # Skapa ett lager
 ### (jag tänker skapa ett eget lager med ett hello-recept , bygger det och mosar in det i min image. Likt det jag gjorde i Buildroot fast nu ett eget lager ovanpå poky)<br>
 
+för att skapa ett lager : 
+kommando : bitbake-layers create-layer meta-"jtest", mitt lager får heta jtest.<br>
+Yocto har ett verktyg för att skapa lager med rätt struktur jag visar genom bild.<br>
+<img width="341" height="175" alt="Skärmbild 2026-06-29 171640" src="https://github.com/user-attachments/assets/8b4448bd-843b-4806-bd67-fe0e50a579e9" /><br>
+
+här är layer.conf det som gör mappen till ett lager. <br>
+genom cat så kollar jag vad conf filen innehåller: <br>
+
+# We have a conf and classes directory, add to BBPATH<br>
+BBPATH .= ":${LAYERDIR}"<br>
+
+# We have recipes-* directories, add to BBFILES<br>
+BBFILES += "${LAYERDIR}/recipes-*/*/*.bb \<br>
+            ${LAYERDIR}/recipes-*/*/*.bbappend"<br>
+
+BBFILE_COLLECTIONS += "meta-jtest"<br>
+BBFILE_PATTERN_meta-jtest = "^${LAYERDIR}/"<br>
+BBFILE_PRIORITY_meta-jtest = "6"<br>
+
+LAYERDEPENDS_meta-jtest = "core"<br>
+LAYERSERIES_COMPAT_meta-jtest = "scarthgap"<br>
+
+Detta är en mall med bortkommenterade exempel på alla vanliga recept delar , detta är bra referens när man skriver sitt egna.<br>
+
+
+
+
+
+
 
   
 
