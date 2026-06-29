@@ -99,9 +99,12 @@ jag bygger om med **bitbake core-image-minimal**
 
 Det gick väldigt fort tillskillnad från första bygget <br>
 Jämnför jag det med det tidigare bygget så ser jag att Missed gick från 1849 till 0 , pga att allt finns i cachen , alla resultat hämtas ifrån sstate istället för att byggas.<br>
-Alla 4060 tasks behövde inte köras om de vara verifierades emot att chachen var giltlig och satte ihop resultatet.
+Alla 4060 tasks behövde inte köras om de vara verifierades emot att chachen var giltlig och satte ihop resultatet.<br>
 
-
+Varje task har sin signatur sk hash av inputs.<br>
+Skalning till team är delad cache = NFS/S3 en kollega får tex mina cache dem bygger inte om det jag har byggt. <br>
+Därav ligger sstate_dir utanför build katalogen local.conf och om jag raderar tillexempel builden överlever cachen.<br>
+Ändrar jag något så får bara påverkade tasks nya signaturer men resterande byggs från cache.<br>
 
 
 
