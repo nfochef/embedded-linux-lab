@@ -135,7 +135,9 @@ LAYERDEPENDS_meta-jtest = "core"<br>
 LAYERSERIES_COMPAT_meta-jtest = "scarthgap"<br>
 
 Detta är en mall med bortkommenterade exempel på alla vanliga recept delar , detta är bra referens när man skriver sitt egna.<br>
+Förklaring till alla variabler samt vilka som behövs för att det ska fungera.<br>
 
+<img width="608" height="425" alt="Skärmbild 2026-06-29 180323" src="https://github.com/user-attachments/assets/64d4e3f8-67e2-496a-a48b-c2516d54bfa4" /><br>
 
 
 
