@@ -120,10 +120,10 @@ Yocto har ett verktyg för att skapa lager med rätt struktur jag visar genom bi
 här är layer.conf det som gör mappen till ett lager. <br>
 genom cat så kollar jag vad conf filen innehåller: <br>
 
-# We have a conf and classes directory, add to BBPATH<br>
+// We have a conf and classes directory, add to BBPATH<br>
 BBPATH .= ":${LAYERDIR}"<br>
 
-# We have recipes-* directories, add to BBFILES<br>
+// We have recipes-* directories, add to BBFILES<br>
 BBFILES += "${LAYERDIR}/recipes-*/*/*.bb \<br>
             ${LAYERDIR}/recipes-*/*/*.bbappend"<br>
 
