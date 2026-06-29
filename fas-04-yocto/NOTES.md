@@ -110,7 +110,7 @@ Därav ligger sstate_dir utanför build katalogen local.conf och om jag raderar 
 
 
 # Skapa ett lager
-### (jag tänker skapa ett eget lager med ett hello-recept , bygger det och mosar in det i min image. Likt det jag gjorde i BUildroot fast nu ett eget lager ovanpå poky)<br>
+### (jag tänker skapa ett eget lager med ett hello-recept , bygger det och mosar in det i min image. Likt det jag gjorde i Buildroot fast nu ett eget lager ovanpå poky)<br>
 
 
   
