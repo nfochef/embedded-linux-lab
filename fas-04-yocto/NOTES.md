@@ -88,7 +88,24 @@ Rreceptet som är mitt första riktiga yocto-recept. Det jag byggde ifrån är i
   bb.utils.contains(...)  = villkorlig logik (om systemd → +4MB)<br>
 
 Det jag ser som mest av värde att försöka komma ihåg är IMAGE_INSTALL styr image innehållet, inherit ger receptet kraft, :append och ${@python} är overide och logik mekaniken.<br>
-Yocto har mycket rikare DSL (inheritance, :append och inline python) som ger mer kraft och känns som att det är väldigt mycket mer att lära.<br>
+Yocto har mycket rikare DSL (inheritance, :append och inline python) som ger mer kraft, tunt recept + tung klass = DRY.
+<br>
+
+# sstate-cache 
+(sstate-cache (shared state cache) är Yoctos minne av redan utfört arbete)
+jag bygger om med **bitbake core-image-minimal**
+
+<img width="1235" height="367" alt="Skärmbild 2026-06-29 162631" src="https://github.com/user-attachments/assets/7730668c-6d19-4cfe-b4a4-7283d6d146e0" />
+
+Det gick väldigt fort tillskillnad från första bygget <br>
+Jämnför jag det med det tidigare bygget så ser jag att Missed gick från 1849 till 0 , pga att allt finns i cachen , alla resultat hämtas ifrån sstate istället för att byggas.<br>
+Alla 4060 tasks behövde inte köras om de vara verifierades emot att chachen var giltlig och satte ihop resultatet.
+
+
+
+
+
+
 
 
   
