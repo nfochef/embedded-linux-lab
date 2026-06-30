@@ -139,6 +139,16 @@ Förklaring till alla variabler samt vilka som behövs för att det ska fungera.
 
 <img width="608" height="425" alt="Skärmbild 2026-06-29 180323" src="https://github.com/user-attachments/assets/64d4e3f8-67e2-496a-a48b-c2516d54bfa4" /><br>
 
+Ny session och aktiveringen av lagret gjorde att miljön hade tappats bitbake-layers: command not found.. vilket betyder att terminalen inte är sourcad då jag öppnade en ny. <br>
+Lösnignen för detta är att re-sourca med : source oe-init-build-env build-qemuarm64 <br>
+Sedan kommando för att aktivera lagret : bitbake-layers add-layer ../meta-jtest<br>
+bitbake-layers show-layers<br>
+Verktyget add-layer redigerar bblayers.conf åt mig.<br>
+meta-jtest är nu aktiverat och syns i listan med prioritet 6.<br>
+<img width="392" height="149" alt="Skärmbild 2026-06-18 091206" src="https://github.com/user-attachments/assets/448654b9-86b3-41e2-a58d-538552d88d6a" /><br>
+Baslagrerna har prioritet 5 som syns<br>
+
+
 
 
 
