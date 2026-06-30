@@ -145,7 +145,8 @@ Sedan kommando för att aktivera lagret : bitbake-layers add-layer ../meta-jtest
 bitbake-layers show-layers<br>
 Verktyget add-layer redigerar bblayers.conf åt mig.<br>
 meta-jtest är nu aktiverat och syns i listan med prioritet 6.<br>
-<img width="392" height="149" alt="Skärmbild 2026-06-18 091206" src="https://github.com/user-attachments/assets/448654b9-86b3-41e2-a58d-538552d88d6a" /><br>
+<img width="746" height="160" alt="Skärmbild 2026-06-30 200057" src="https://github.com/user-attachments/assets/582f2bdc-c307-40b5-9bf6-2d9afcb19edf" /><br>
+
 Baslagrerna har prioritet 5 som syns<br>
 
 
