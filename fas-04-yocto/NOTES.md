@@ -162,7 +162,8 @@ Behöver kunna skilja mer på att förstå vad som är deklarativt mot vad som f
 
 
 Byggde genom att köra bitbake hello som resulterade i ett **do_compile** fel. Vi kan se att licens check summan gick igenom och att 812 tasks hämtades från cache.<br>
-Men Kompilatorn letade efter hello.c i sources/-mappen men den fanns inte där. Det betyder att do_unpack inte la till hello.c på den plats jag pekade **S** och **UNPACKDIR** till.
+Men Kompilatorn letade efter hello.c i sources/-mappen men den fanns inte där. Det betyder att do_unpack inte la till hello.c på den plats jag pekade **S**(Source Dir) och **UNPACKDIR** till.
+Genom att ändra receptet och peka på rätt source denna gång och ta bort en flag i do_compile headern.<br>
 
 
 
