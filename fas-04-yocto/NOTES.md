@@ -155,7 +155,7 @@ Metadata är en typ av funktion som beskriver bygget men kör inget själv<br>
 Yocto kräver strikt licensspårning (LICENSE + LIC_FILES_CHKSUM)<br>
 SRC_URI definierar var källkod hämtas (lokal eller remote)<br>
 ${CC} hanterar cross-compilation automatiskt är samma recipe funkar för alla targets<br>
-${D} är staging, inte rootfs, installera till ${D}, Yocto paketerar det vidare<br>
+${D} (D= Destination Dir) är staging, inte rootfs, installera till ${D}, Yocto paketerar det vidare<br>
 Behöver kunna skilja mer på att förstå vad som är deklarativt mot vad som faktiskt påverkar build-processen utan att behöva kolla upp det varje gång...<br>
 <br><br>
 <img width="1211" height="545" alt="Skärmbild 2026-07-01 193951" src="https://github.com/user-attachments/assets/a4329829-15f7-4b43-a8a8-19c2b3339a00" /><br>
